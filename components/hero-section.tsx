@@ -49,7 +49,7 @@ export default function HeroSection() {
 
             <div className="relative h-[400px] lg:h-[500px]">
               <img
-                src="/modern-luxury-car-front-view-on-gradient-backgroun.jpg"
+                src="/modern-luxury-car-on-gradient-background.jpg"
                 alt="Modern car"
                 className="absolute bottom-0 right-0 w-full h-full object-contain"
               />
