@@ -12,7 +12,7 @@ export default function HeroSection() {
             alt="Hero background"
             aria-hidden="true"
             loading="eager"
-            style={{ objectPosition: '100% 80%' }}
+            style={{ objectPosition: '100% 100%' }}
             className="absolute inset-0 w-full h-full object-cover object-right z-0"
           />
           <div className="relative z-20 grid lg:grid-cols-12 gap-8 items-center p-2 lg:p-16">
@@ -24,11 +24,29 @@ export default function HeroSection() {
                 Найди ближайшую автомойку, выбери удобное время и оплати онлайн
               </p>
 
-              <div className="space-y-4">
-                  <Button className="bg-white text-black hover:bg-gray-100 whitespace-nowrap">
+              <div className="space-y-2">
+                  <Button className="bg-white text-black hover:bg-gray-100 whitespace-nowrap cursor-pointer w-50 h-10 text-md">
                     Скачать приложение
                   </Button>
-              </div>
+                  <div className="flex items-center gap-4 mt-3">
+                    {/* Replace these <img> sources with your real badge images if needed */}
+                    <a
+                      href="#"
+                      className="inline-flex items-center justify-center w-30 h-12 rounded-md overflow-hidden"
+                      aria-label="App Store link"
+                    >
+                      <img src="/badges/app-store-badge.svg" alt="App Store" className="w-full h-auto" />
+                    </a>
+
+                    <a
+                      href="#"
+                      className="inline-flex items-center justify-center w-30 h-12 rounded-md overflow-hidden"
+                      aria-label="Google Play link"
+                    >
+                      <img src="/badges/google-play-badge.svg" alt="Google Play" className="w-full h-auto" />
+                    </a>
+                  </div>
+                </div>
             </div>
 
             <div className="relative h-[400px] lg:h-[500px] lg:col-span-5" />
