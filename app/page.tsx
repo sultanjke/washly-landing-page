@@ -5,21 +5,20 @@ import FeatureCards from "@/components/feature-cards"
 import HowItWorks from "@/components/how-it-works"
 import PricingSection from "@/components/pricing-section"
 import DownloadSection from "@/components/download-section"
-import {Footer} from "react-day-picker";
-
+import Footer from '@/components/footer'
 export default function Home() {
-    return (
-        <div id="home" className="min-h-screen bg-white">
-            <Header/>
-            <main>
-                <HeroSection/>
-                <FeaturesPreview/>
-                <FeatureCards/>
-                <HowItWorks/>
-                <PricingSection/>
-                <DownloadSection/>
-            </main>
-            <Footer/>
-        </div>
-    )
+  return (
+    <div id="home" className="min-h-screen bg-white">
+      <Header />
+      <main>
+        <HeroSection />
+        <FeaturesPreview />
+        <FeatureCards />
+        <HowItWorks />
+        <PricingSection />
+        <DownloadSection />
+      </main>
+        <Footer/>
+    </div>
+  )
 }
