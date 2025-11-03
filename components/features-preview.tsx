@@ -13,28 +13,24 @@ export default function FeaturesPreview() {
           Не трать время в очередях. Выбирай мойку, бронируй время и оплачивай онлайн
         </p>
 
-        <div className="relative top-[8rem] max-w-5xl mx-auto h-[600px]">
-          <div className="absolute left-16 top-1/2 -translate-y-1/2 w-[20rem] z-10">
+        <div className="relative top-[8rem] max-w-5xl mx-auto h-[600px] ">
+          <div className="absolute left-22 top-1/2 -translate-y-1/2 w-[17.7rem] z-10">
               <img
-                  src="/app_demonstration_1.png"
+                  src="/app_demonstration_2.png"
                   alt="App screen 1"
                   className="w-full "
               />
-
-
           </div>
-
           <div className="absolute left-1/2 -translate-x-1/2 -translate-y-[-5rem] bottom-1 w-[24rem] z-20">
               <img
-                  src="/app_demonstration_2.png"
+                  src="/app_demonstration_3.png"
                   alt="App screen 2"
                   className="w-full "
               />
           </div>
-
-          <div className="absolute right-15 top-1/2 -translate-y-1/2 w-[20.6rem] z-10">
+          <div className="absolute right-22 top-1/2 -translate-y-1/2 w-[17rem] z-10">
               <img
-                  src="/app_demonstration_3.png"
+                  src="/app_demonstration_1.png"
                   alt="App screen 2"
                   className="w-full "
               />
