@@ -11,13 +11,13 @@ export default function Header() {
               <a href="#" className="text-sm text-gray-600 hover:text-gray-900">
                 Главная
               </a>
-              <a href="#" className="text-sm text-gray-600 hover:text-gray-900">
+              <a href="#advantages" className="text-sm text-gray-600 hover:text-gray-900">
                 Преимущества
               </a>
-              <a href="#" className="text-sm text-gray-600 hover:text-gray-900">
+              <a href="#partners" className="text-sm text-gray-600 hover:text-gray-900">
                 Партнёрам
               </a>
-              <a href="#" className="text-sm text-gray-600 hover:text-gray-900">
+              <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900">
                 Тарифы
               </a>
             </nav>
