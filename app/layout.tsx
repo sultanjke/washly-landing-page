@@ -1,11 +1,23 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
+import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
+
+const yandex = localFont({
+  // Use filesystem paths that resolve at build time. From `app/layout.tsx`,
+  // public is a sibling directory, so reference fonts via "../public/...".
+  src: [
+    { path: "../public/fonts/YandexSansDisplay-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../public/fonts/YandexSansDisplay-Bold.ttf", weight: "700", style: "normal" },
+  ],
+  display: "swap",
+  preload: true,
+})
 
 export const metadata: Metadata = {
   title: "Washly - Современное приложение для автомойки",
@@ -20,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
+      <body className={`${yandex.className} antialiased`}>
         {children}
         <Analytics />
       </body>
