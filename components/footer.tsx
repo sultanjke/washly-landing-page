@@ -20,7 +20,7 @@ export default function Footer() {
                     <span className="font-semibold text-gray-600">Sultan Mecheyev</span> — Made by{" "}
                     <span className="font-semibold text-gray-600">Humans</span> on{" "}
                     <a href="#" className="text-green-600 font-medium hover:underline">
-                        Earth
+                        Mars
                     </a>
                 </div>
             </div>
