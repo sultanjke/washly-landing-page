@@ -58,7 +58,7 @@ export default function PricingSection() {
   ]
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8">
+    <section className="py-16 px-4 sm:px-6 lg:px-8" id="pricing">
       <div className="max-w-7xl mx-auto">
         <div className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 rounded-3xl p-8 lg:p-16">
           <div className="text-center text-white mb-12">

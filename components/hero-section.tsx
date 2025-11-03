@@ -1,8 +1,53 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Apple, Play } from "lucide-react"
+import { useState } from "react"
 
 export default function HeroSection() {
+    const [phone, setPhone] = useState("")
+
+    const formatPhone = (digits: string) => {
+        if (digits === "") return ""
+
+        // ограничиваем длину
+        if (digits.length > 11) digits = digits.slice(0, 11)
+
+        // заменяем первую 8 на 7, если есть
+        if (digits.startsWith("8")) digits = "7" + digits.slice(1)
+        if (!digits.startsWith("7")) digits = "7" + digits
+
+        // форматирование
+        let formatted = "+7"
+        if (digits.length > 1) formatted += " (" + digits.slice(1, 4)
+        if (digits.length >= 4) formatted += ") " + digits.slice(4, 7)
+        if (digits.length >= 7) formatted += "-" + digits.slice(7, 9)
+        if (digits.length >= 9) formatted += "-" + digits.slice(9, 11)
+
+        return formatted
+    }
+
+    const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const raw = e.target.value
+        const digits = raw.replace(/\D/g, "")
+        setPhone(formatPhone(digits))
+    }
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Backspace") {
+            const input = e.currentTarget
+            const start = input.selectionStart ?? 0
+            const end = input.selectionEnd ?? 0
+
+            // если курсор не в конце — обычное поведение
+            if (start !== input.value.length || end !== input.value.length) return
+
+            // если удаляем последний символ — снимаем по цифрам
+            const digits = phone.replace(/\D/g, "")
+            const newDigits = digits.slice(0, -1)
+            setPhone(formatPhone(newDigits))
+            e.preventDefault()
+        }
+    }
   return (
     <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">

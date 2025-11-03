@@ -5,10 +5,10 @@ import FeatureCards from "@/components/feature-cards"
 import HowItWorks from "@/components/how-it-works"
 import PricingSection from "@/components/pricing-section"
 import DownloadSection from "@/components/download-section"
-
+import Footer from '@/components/footer'
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div id="home" className="min-h-screen bg-white">
       <Header />
       <main>
         <HeroSection />
@@ -18,6 +18,7 @@ export default function Home() {
         <PricingSection />
         <DownloadSection />
       </main>
+        <Footer/>
     </div>
   )
 }
