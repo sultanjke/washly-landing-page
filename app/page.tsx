@@ -8,7 +8,7 @@ import DownloadSection from "@/components/download-section"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div id="home" className="min-h-screen bg-white">
       <Header />
       <main>
         <HeroSection />

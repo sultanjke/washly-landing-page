@@ -35,7 +35,6 @@ export default function HeroSection() {
     }
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        // Разрешаем удалять любой символ, в том числе "-", ")", " "
         if (e.key === "Backspace") {
             const input = e.currentTarget
             const start = input.selectionStart ?? 0
@@ -53,7 +52,7 @@ export default function HeroSection() {
     }
 
     return (
-        <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+        <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8" id="#home">
             <div className="max-w-7xl mx-auto">
                 <div className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-amber-600 rounded-3xl overflow-hidden">
                     <div className="grid lg:grid-cols-2 gap-8 items-center p-8 lg:p-16">
