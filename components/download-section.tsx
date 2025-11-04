@@ -3,7 +3,7 @@ import {Apple, Play} from "lucide-react"
 
 export default function DownloadSection() {
     return (
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section id="download" className="py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-6">
                     {/* Левая чёрная карточка */}
