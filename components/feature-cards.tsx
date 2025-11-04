@@ -1,55 +1,113 @@
+import Image from "next/image";
+
 export default function FeatureCards() {
   const features = [
     {
       title: "QR — доступ",
-      description: "Просто отсканируйте QR-код и начните мойку. Быстро и безопасно.",
-      gradient: "from-blue-600 via-purple-600 to-purple-700",
-      imageSrc: "/images/qr-access.png",
+      description:
+        "Просто отсканируйте QR-код и начните мойку. Быстро и безопасно.",
+      bgSrc: "/images/cards/qr-bg.png",
+      decoSrc: "/images/cards/qr-deco.png",
+      decoSide: "left" as const,
+      align: "left" as const,
     },
     {
       title: "Удобное приложение",
-      description: "Найдите ближайшую станцию на карте и посмотрите доступность в реальном времени.",
-      gradient: "from-purple-600 via-purple-700 to-blue-600",
-      imageSrc: "/images/app-convenience.png",
+      description:
+        "Найдите ближайшую станцию на карте и посмотрите доступность в реальном времени.",
+      bgSrc: "/images/cards/app-bg.png",
+      decoSrc: "/images/cards/app-deco.png",
+      decoSide: "right" as const,
+      align: "right" as const,
     },
     {
       title: "Безопасные платежи",
-      description: "Kaspi Pay и банковские карты. Ваши деньги под защитой.",
-      gradient: "from-red-600 via-red-700 to-orange-600",
-      imageSrc: "/images/safe-payments.png",
+      description:
+        "Kaspi Pay и банковские карты. Ваши деньги под защитой.",
+      bgSrc: "/images/cards/pay-bg.png",
+      decoSrc: "/images/cards/pay-deco.png",
+      decoSide: "left" as const,
+      align: "left" as const,
     },
     {
       title: "Приглашай друзей",
-      description: "Получайте бесплатную мойку за каждого приглашенного друга.",
-      gradient: "from-purple-600 via-purple-700 to-blue-600",
-      imageSrc: "/images/invite-friends.png",
+      description:
+        "Получайте бесплатную мойку за каждого приглашенного друга.",
+      bgSrc: "/images/cards/invite-bg.png",
+      decoSrc: "/images/cards/invite-deco.png",
+      decoSide: "right" as const,
+      align: "right" as const,
     },
-  ]
+  ];
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-6">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className={`relative bg-linear-to-br ${feature.gradient} rounded-4xl p-8 text-white overflow-hidden min-h-[480px] flex flex-col justify-between`}
+      <div className="mx-auto max-w-5xl">
+        <div className="grid gap-8 md:grid-cols-2">
+          {features.map((f, i) => (
+            <article
+              key={i}
+              className="relative overflow-hidden rounded-[28px] h-[360px] md:h-[400px] shadow-[0_20px_60px_rgba(0,0,0,0.25)]"
+              style={{
+                backgroundImage: `url(${f.bgSrc})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
-              <div className="relative z-10">
-                <h3 className="text-4xl font-bold mb-5 mt-6">{feature.title}</h3>
-                <p className="text-white/90 text-lg">{feature.description}</p>
+              {/* Soft vignette + blur glow to match the look */}
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_90%_at_10%_10%,rgba(255,255,255,0.22)_0%,rgba(255,255,255,0.06)_35%,rgba(0,0,0,0.35)_100%)]" />
+
+              {/* Content */}
+              <div
+                className={
+                  "relative z-10 flex h-full flex-col justify-between p-8 sm:p-10 text-white"
+                }
+              >
+                <header
+                  className={
+                    f.align === "right"
+                      ? "text-right"
+                      : f.align === "center"
+                      ? "text-center"
+                      : "text-left"
+                  }
+                >
+                  <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)]">
+                    {f.title}
+                  </h3>
+                  <p className={
+                    "mt-4 max-w-xs text-white/90 leading-6 sm:leading-7" +
+                    (f.align === "center" ? " mx-auto" : f.align === "right" ? " ml-auto" : "")
+                  }>
+                    {f.description}
+                  </p>
+                </header>
+
+                {/* Spacer to push deco item off the text a bit */}
+                <div className="h-20" />
               </div>
-              <div className="relative z-0 mt-4 flex justify-center items-center">
-                <img
-                  src={feature.imageSrc}
-                  alt={feature.title}
-                  className="absolute inset-0 w-full h-full object-cover rounded-4xl"
-                />
+
+              {/* Floating 3D item */}
+              <div
+                className={
+                  "absolute z-20 w-[160px] sm:w-[190px] md:w-[210px] bottom-[-12px] " +
+                  (f.decoSide === "left" ? "left-[-8px]" : "right-[-8px]")
+                }
+              >
+                <Image
+                  src={f.decoSrc}
+                  alt=""
+                  width={420}
+                  height={420}
+                  className="select-none pointer-events-none drop-shadow-[0_25px_45px_rgba(0,0,0,0.35)]"/>
               </div>
-            </div>
+
+              {/* Inner card corners (strong rounding like the reference) */}
+              <div className="pointer-events-none absolute inset-0 rounded-[28px] ring-1 ring-white/8" />
+            </article>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

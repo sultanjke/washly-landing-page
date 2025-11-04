@@ -18,7 +18,7 @@ export default function HowItWorks() {
                     <div
                         className="
                           absolute left-0 right-0 top-1/4 -translate-y-1/2
-                          h-[0.4rem] bg-black
+                          h-[0.2rem] bg-black
                           hidden sm:block
                           [mask-image:linear-gradient(90deg,transparent,black_12%,black_88%,transparent)]
                         "

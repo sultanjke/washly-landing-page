@@ -9,7 +9,7 @@ export default function FeaturesPreview() {
         </div>
 
         <h2 className="text-4xl font-bold mb-4">Чисто, удобно, быстро.</h2>
-        <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-gray-500 mb-12 max-w-2xl mx-auto">
           Не трать время в очередях. Выбирай мойку, бронируй время и оплачивай онлайн
         </p>
 
