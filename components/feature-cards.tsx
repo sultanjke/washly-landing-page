@@ -55,7 +55,7 @@ export default function FeatureCards() {
               }}
             >
               {/* Soft vignette + blur glow to match the look */}
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_90%_at_10%_10%,rgba(255,255,255,0.22)_0%,rgba(255,255,255,0.06)_35%,rgba(0,0,0,0.35)_100%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_90%_at_10%_10%,rgba(255,255,255,0.22)_0%,rgba(255,255,255,0.06)_35%,rgba(0,0,0,0.35)_100%)]" /> 
 
               {/* Content */}
               <div
