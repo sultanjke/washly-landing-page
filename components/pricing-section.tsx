@@ -17,16 +17,16 @@ export default function PricingSection() {
     {
       name: "Базовый",
       price: "2990",
+      priceDiscount: "‎ ",
       features: [true, true, true, true, false, false, false, false],
-      gradient: "from-cyan-500 to-blue-600",
       popular: false,
       imageSrc: "/images/basic-plan.png",
     },
     {
       name: "Премиум",
       price: "4990",
+      priceDiscount: "7990₸",
       features: [true, true, true, true, true, true, false, false],
-      gradient: "from-green-500 to-emerald-600",
       popular: true,
       popularLabel: "Самый популярный",
       imageSrc: "/images/premium-plan.png",
@@ -34,8 +34,8 @@ export default function PricingSection() {
     {
       name: "VIP",
       price: "8990",
+      priceDiscount: "15990₸",
       features: [true, true, true, true, true, true, true, true],
-      gradient: "from-orange-500 to-red-600",
       popular: false,
       imageSrc: "/images/vip-plan.png",
     },
@@ -58,17 +58,17 @@ export default function PricingSection() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-3">
               {plans.map((plan, index) => (
                 <div key={index} className="relative">
                   {plan.popular && (
-                    <div className="pointer-events-none absolute inset-x-4 top-[-10] pb-6 -translate-y-1/2 flex items-center justify-center gap-2 rounded-xl bg-green-500 py-2 text-sm font-regular tracking-wide text-white shadow-xl">
-                      <span>{plan.popularLabel ?? "Most chosen"}</span>
+                    <div className="pointer-events-none absolute inset-x-4 top-[-10] pb-6 -translate-y-1/2 flex items-center justify-center gap-2 rounded-xl bg-green-500 py-2 text-md font-regular font-regular tracking-wide text-white shadow-xl">
+                      <span>{plan.popularLabel ?? "Привилегированный план"}</span>
                       <img src="/particles.png" alt="" className="h-4 w-4"/>
                     </div>
                   )}
                   <div
-                    className={`relative z-10 rounded-2xl bg-white p-6 shadow-md transition-all duration-300 ${
+                    className={`relative z-10 rounded-2xl bg-white p-4 shadow-md transition-all duration-300 ${
                       plan.popular ? "shadow-2xl" : ""
                     }`}
                   >
@@ -84,11 +84,19 @@ export default function PricingSection() {
                     </div>
 
                     <div className="text-left mt-auto">
-                      <div className="flex items-baseline gap-2 pl-3">
-                        <span className="text-4xl font-bold text-gray-900">{plan.price}₸</span>
-                        <span className="text-gray-500">в месяц</span>
+                      <div className="flex items-end gap-2 pl-3">
+                        <div className="flex flex-col leading-none">
+                          <span className="text-sm font-bold text-gray-300 line-through -mb-0.5">
+                            {plan.priceDiscount}
+                          </span>
+                          <span className="text-4xl font-bold text-gray-900">
+                            {plan.price}₸
+                          </span>
+                        </div>
+                        <span className="text-gray-500 pb-1">в месяц</span>
                       </div>
                     </div>
+
 
                     <ul className="mt-6 space-y-2 pl-3">
                       {benefits.map((benefit, idx) => (
