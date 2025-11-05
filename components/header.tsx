@@ -36,7 +36,7 @@ export default function Header() {
                             </a>
                         </nav>
                     </div>
-                    <Button onClick={(e)=>handleScroll(e,"#download")}  className="bg-black text-white hover:bg-gray-800 rounded-full px-6"><a href="#download">Скачать</a></Button>
+                    <Button onClick={(e)=>handleScroll(e,"#download")}  className="bg-black text-white hover:bg-gray-800 rounded-xl px-6 font-semibold"><a href="#download">Скачать</a></Button>
                 </div>
             </div>
         </header>
