@@ -21,7 +21,7 @@ export default function Footer() {
                     Designed by{" "}
                     <span className="font-semibold">Sultan Mecheyev</span> — Made by{" "}
                     <span className="font-semibold">Humans</span> on{" "}
-                    <a href="#" className="text-green-600 font-semibold hover:underline">
+                    <a href="#" className="text-green-300 font-semibold hover:underline">
                         Earth
                     </a>
                 </div>
