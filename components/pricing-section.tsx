@@ -1,100 +1,121 @@
-import { Button } from "@/components/ui/button"
-import { Check } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { BadgeCheckIcon, Star } from "lucide-react";
 
 export default function PricingSection() {
+  const benefits = [
+    "Безлимитные мойки",
+    "Полный детейлинг",
+    "Химчистка салона",
+    "Полировка кузова",
+    "Защитное покрытие",
+    "Выездная мойка",
+    "VIP-обслуживание 24/7",
+    "Персональный менеджер",
+  ];
+
   const plans = [
     {
       name: "Базовый",
-      price: "299",
-      features: [
-        "Экспресс мойка",
-        "Уборка салона",
-        "Мойка дисков",
-        "Сушка автомобиля",
-        "Чистка ковриков",
-        "Чистка стёкол",
-        "Протирка панели",
-        "Пылесос салона",
-      ],
+      price: "2990",
+      features: [true, true, true, true, false, false, false, false],
       gradient: "from-cyan-500 to-blue-600",
       popular: false,
+      imageSrc: "/images/basic-plan.png",
     },
     {
       name: "Премиум",
-      price: "499",
-      features: [
-        "Экспресс мойка",
-        "Уборка салона",
-        "Мойка дисков",
-        "Сушка автомобиля",
-        "Чистка ковриков",
-        "Чистка стёкол",
-        "Протирка панели",
-        "Пылесос салона",
-        "Полировка кузова",
-        "Чернение шин",
-      ],
+      price: "4990",
+      features: [true, true, true, true, true, true, false, false],
       gradient: "from-green-500 to-emerald-600",
       popular: true,
+      popularLabel: "Самый популярный",
+      imageSrc: "/images/premium-plan.png",
     },
     {
       name: "VIP",
-      price: "899",
-      features: [
-        "Комплексная мойка",
-        "Детейлинг салона",
-        "Полировка кузова",
-        "Химчистка салона",
-        "Чернение шин",
-        "Нанесение воска",
-        "VIP-обслуживание 24/7",
-        "Персональный менеджер",
-        "Трансфер авто",
-        "Страхование авто",
-      ],
+      price: "8990",
+      features: [true, true, true, true, true, true, true, true],
       gradient: "from-orange-500 to-red-600",
       popular: false,
+      imageSrc: "/images/vip-plan.png",
     },
-  ]
+  ];
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8" id="pricing">
       <div className="max-w-7xl mx-auto">
-        <div className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 rounded-3xl p-8 lg:p-16">
-          <div className="text-center text-white mb-12">
-            <h2 className="text-4xl font-bold mb-4">Выбери свой уровень чистоты</h2>
-            <p className="text-white/80 max-w-3xl mx-auto">
-              Каждый уровень предлагает уникальный набор услуг для профессионального ухода, превосходящий стандартные
-              предложения
-            </p>
-          </div>
+        <div className="relative rounded-3xl overflow-hidden">
+          <img
+            src="/images/pricing-placeholder.png"
+            alt="Фоновое изображение для блока тарифов"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="relative rounded-3xl p-8 lg:p-16">
+            <div className="text-center text-white mb-12">
+              <h2 className="text-4xl font-bold mb-4">Выбери свой уровень чистоты</h2>
+              <p className="text-white/80 max-w-3xl mx-auto pt-3 w-90 text-lg mb-20">
+                Стань участником клуба и получай доступ к профессиональному уходу, приоритетное обслуживание и персональные бонусы.
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {plans.map((plan, index) => (
-              <div key={index} className={`bg-white rounded-2xl p-6 ${plan.popular ? "ring-4 ring-green-400" : ""}`}>
-                <div className={`bg-gradient-to-br ${plan.gradient} text-white rounded-xl p-4 mb-6`}>
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-bold">{plan.price}₸</span>
-                    <span className="text-white/80">/ месяц</span>
+            <div className="grid md:grid-cols-3 gap-6">
+              {plans.map((plan, index) => (
+                <div key={index} className="relative">
+                  {plan.popular && (
+                    <div className="pointer-events-none absolute inset-x-4 top-[-10] pb-6 -translate-y-1/2 flex items-center justify-center gap-2 rounded-xl bg-green-500 py-2 text-sm font-regular tracking-wide text-white shadow-xl">
+                      <span>{plan.popularLabel ?? "Most chosen"}</span>
+                      <img src="/particles.png" alt="" className="h-4 w-4"/>
+                    </div>
+                  )}
+                  <div
+                    className={`relative z-10 rounded-2xl bg-white p-6 shadow-md transition-all duration-300 ${
+                      plan.popular ? "shadow-2xl" : ""
+                    }`}
+                  >
+                    <div className="relative bg-linear-to-br rounded-xl overflow-hidden mb-6">
+                      <img
+                        src={plan.imageSrc}
+                        alt={plan.name}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                      <div className="relative z-10 p-4 text-white pl-8 h-30">
+                        <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                      </div>
+                    </div>
+
+                    <div className="text-left mt-auto">
+                      <div className="flex items-baseline gap-2 pl-3">
+                        <span className="text-4xl font-bold text-gray-900">{plan.price}₸</span>
+                        <span className="text-gray-500">в месяц</span>
+                      </div>
+                    </div>
+
+                    <ul className="mt-6 space-y-2 pl-3">
+                      {benefits.map((benefit, idx) => (
+                        <li
+                          key={idx}
+                          className="flex items-center gap-2 text-sm"
+                        >
+                          <BadgeCheckIcon
+                            className={`w-3 h-3 shrink-0 ${plan.features[idx] ? "text-black" : "text-gray-400"}`}
+                          />
+                          <span className={`${plan.features[idx] ? "text-black" : "text-gray-400"}`}>{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="mt-6">
+                      <Button className="w-full rounded-lg border font-bold border-gray-300 text-black bg-white hover:bg-gray-100 cursor-pointer hover:shadow-xl transition">
+                        Скачать приложение
+                      </Button>
+                    </div>
                   </div>
                 </div>
-
-                <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-sm">
-                      <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Button className="w-full bg-gray-900 hover:bg-gray-800 text-white">Скачать приложение</Button>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
