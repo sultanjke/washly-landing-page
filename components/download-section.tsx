@@ -6,16 +6,16 @@ export default function DownloadSection() {
         <section id="download" className="py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-6">
-                    {/* Левая чёрная карточка */}
+                    {/* Левая карточка */}
                     <div
-                        className="bg-black rounded-[3rem] p-7 lg:px-12 flex items-start flex-col justify-center lg:p-6 text-white w-full h-full">
-                        <h3 className="text-[2.5rem] font-bold mb-3">
+                        className="bg-black rounded-[2rem] p-7 lg:px-12 flex items-start flex-col justify-center lg:p-6 text-white w-full h-full">
+                        <h3 className="text-[2rem] font-bold mb-3">
                             Больше возможностей в приложении Washly.kz
                         </h3>
-                        <p className="text-white mb-8 text-[1.5rem]">
+                        <p className="text-white mb-8 text-[1.2rem]">
                             Установите приложение по QR-коду или скачайте в App Store и Google Play
                         </p>
-                        <div className="flex flex-wrap gap-2 mb-20">
+                        <div className="flex flex-wrap gap-2 mb-15">
                             <a
                                 href="#"
                                 className="inline-flex items-center justify-center w-30 h-12 rounded-md overflow-hidden"
@@ -34,7 +34,8 @@ export default function DownloadSection() {
                         </div>
 
                     </div>
-                    <img src="/download-app-illustration.png" className="w-full h-full" />
+                    {/* Правая карточка */}
+                    <img src="/download-app-illustration.png" className="w-full h-full rounded-[2rem]" />
                 </div>
             </div>
         </section>

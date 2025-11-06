@@ -28,15 +28,18 @@ export default function Header() {
                             <a href="#advantages" onClick={(e) => handleScroll(e, "#advantages")} className="text-sm text-gray-600 hover:text-gray-900">
                                 Преимущества
                             </a>
-                            <a href="#partners" onClick={(e) => handleScroll(e, "#partners")} className="text-sm text-gray-600 hover:text-gray-900">
-                                Партнёрам
-                            </a>
-                            <a href="#pricing" onClick={(e) => handleScroll(e, "#pricing")} className="text-sm text-gray-600 hover:text-gray-900">
+                            <a href="#partners" onClick={(e) => handleScroll(e, "#pricing")} className="text-sm text-gray-600 hover:text-gray-900">
                                 Тарифы
+                            </a>
+                            <a href="#pricing" onClick={(e) => handleScroll(e, "#partners")} className="text-sm text-gray-600 hover:text-gray-900">
+                                Партнёрам
                             </a>
                         </nav>
                     </div>
-                    <Button onClick={(e)=>handleScroll(e,"#download")}  className="bg-black text-white hover:bg-gray-800 rounded-xl px-6 font-semibold"><a href="#download">Скачать</a></Button>
+                    <div className="hidden md:flex">
+                        <img src="themes/darktheme.png" alt="" className="w-4 h-4 mr-5 mt-3" />
+                        <Button className="bg-black text-white hover:bg-gray-800 rounded-xl px-6 cursor-pointer">Скачать</Button>
+                    </div>
                 </div>
             </div>
         </header>
