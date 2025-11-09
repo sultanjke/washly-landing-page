@@ -5,7 +5,7 @@ import { useState } from "react"
 
 export default function HeroSection() {
   return (
-    <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+    <section data-reveal className="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="relative rounded-3xl overflow-hidden min-h-[400px] lg:min-h-[500px]">
           <img
@@ -21,7 +21,7 @@ export default function HeroSection() {
               <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-balance w-220">
                 Современное приложение для тех, кто ценит время и комфорт
               </h1>
-              <p className="text-xl font-regular text-white/90 w-300">
+              <p className="text-2xl font-regular text-white/90 w-125">
                 Найди ближайшую автомойку, выбери удобное время и оплати онлайн
               </p>
 

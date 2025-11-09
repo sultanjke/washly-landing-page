@@ -26,14 +26,14 @@ export default function Header() {
                             <a href="#home" onClick={(e) => handleScroll(e, "#home")} className="text-sm text-gray-600 hover:text-gray-900">
                                 Главная
                             </a>
-                            <a href="#advantages" onClick={(e) => handleScroll(e, "#advantages")} className="text-sm text-gray-600 hover:text-gray-900">
-                                Преимущества
+                            <a href="#autoservices" onClick={(e) => handleScroll(e, "#autoservices")} className="text-sm text-gray-600 hover:text-gray-900">
+                                Партнеры
                             </a>
-                            <a href="#partners" onClick={(e) => handleScroll(e, "#pricing")} className="text-sm text-gray-600 hover:text-gray-900">
-                                Тарифы
+                            <a href="#app-preview" onClick={(e) => handleScroll(e, "#app-preview")} className="text-sm text-gray-600 hover:text-gray-900">
+                                CRM система
                             </a>
-                            <Link href="/partners" className="text-sm text-gray-600 hover:text-gray-900">
-                                Партнёрам
+                            <Link href="/" className="text-sm text-gray-600 hover:text-gray-900">
+                                Клиентам
                             </Link>
                         </nav>
                     </div>

@@ -1,0 +1,38 @@
+export default function AppPreview() {
+  return (
+    <section data-reveal className="py-24 px-4 sm:px-6 lg:px-8" id="app-preview">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid gap-8 lg:grid-cols-2">
+          <article className="relative overflow-hidden rounded-[2.5rem] bg-slate-100 shadow-2xl">
+            <div className="absolute inset-0 z-10" />
+            <div className="absolute inset-x-0 top-11 z-20 px-8 pt-10 sm:px-10">
+              <h3 className="text-4xl font-bold leading-tight text-white text-center">
+                <span className="block">Панель управления</span>
+                <span className="block">автомойкой</span>
+              </h3>
+            </div>
+            <img
+              src="/appPreview2.png"
+              alt="Настройка времени, боксов и цен на услуги"
+              className="h-full w-full object-cover"
+            />
+          </article>
+          <article className="relative overflow-hidden rounded-[2.5rem] bg-slate-100 shadow-2xl">
+            <div className="absolute inset-0 z-10" />
+            <div className="absolute inset-x-0 top-11 z-20 px-8 pt-10 sm:px-10">
+              <h3 className="text-4xl font-bold text-white text-center">
+                <span className="block">Статистика посещений</span>
+                <span className="block">и доходов</span>
+              </h3>
+            </div>
+            <img
+              src="/appPreview1.png"
+              alt="Визиты и доход с выгрузкой в Excel / PDF"
+              className="h-full w-full object-cover"
+            />
+          </article>
+        </div>
+      </div>
+    </section>
+  )
+}

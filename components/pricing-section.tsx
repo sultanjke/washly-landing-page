@@ -42,7 +42,7 @@ export default function PricingSection() {
   ];
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8" id="pricing">
+    <section data-reveal className="py-16 px-4 sm:px-6 lg:px-8" id="pricing">
       <div className="max-w-7xl mx-auto">
         <div className="relative rounded-3xl overflow-hidden">
           <img

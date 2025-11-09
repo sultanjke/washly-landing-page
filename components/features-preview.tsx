@@ -1,7 +1,7 @@
 
 export default function FeaturesPreview() {
   return (
-    <section className="py-16 px-4 mt-5 mb-48 sm:px-6 lg:px-8" id="advantages">
+    <section data-reveal className="py-16 px-4 mt-5 mb-48 sm:px-6 lg:px-8" id="advantages">
       <div className="max-w-7xl mx-auto text-center">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6">
           {/*<Sparkles className="w-8 h-8 text-amber-500" />*/}

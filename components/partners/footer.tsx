@@ -1,7 +1,6 @@
-// components/footer.tsx
 import { Mail } from "lucide-react"
 
-export default function Footer() {
+export default function PartnersFooter() {
     return (
         <footer data-reveal className="border-t border-gray-200 bg-white max-w-7xl mx-auto">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500">
@@ -16,7 +15,6 @@ export default function Footer() {
                     </a>
                 </div>
 
-                {/* Правая часть */}
                 <div className="text-center sm:text-right text-gray-400 text-sm">
                     Performed by{" "}
                     <span className="relative inline-flex items-center group">
