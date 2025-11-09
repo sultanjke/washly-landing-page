@@ -2,7 +2,7 @@ export default function PartnersDownloadSection() {
     return (
         <section data-reveal id="download" className="py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <div className="bg-black rounded-4xl p-10 sm:p-14 text-white">
+                <div className="bg-[#06090E] rounded-4xl p-10 sm:p-14 text-white">
                     <h3 className="text-3xl font-bold text-center sm:text-4xl">
                         Оставьте заявку на партнерство
                     </h3>

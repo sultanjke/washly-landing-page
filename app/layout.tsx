@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google"
 import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
 import ScrollRevealProvider from "@/components/scroll-reveal-provider"
+import InitialLoader from "@/components/initial-loader"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -34,9 +35,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${yandex.className} antialiased`}>
-        <ScrollRevealProvider>
-          {children}
-        </ScrollRevealProvider>
+        <InitialLoader>
+          <ScrollRevealProvider>
+            {children}
+          </ScrollRevealProvider>
+        </InitialLoader>
         <Analytics />
       </body>
     </html>

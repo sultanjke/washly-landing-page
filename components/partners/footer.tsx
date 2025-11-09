@@ -1,4 +1,5 @@
 import { Mail } from "lucide-react"
+import { LinkPreview } from "@/components/ui/link-preview"
 
 export default function PartnersFooter() {
     return (
@@ -16,32 +17,11 @@ export default function PartnersFooter() {
                 </div>
 
                 <div className="text-center sm:text-right text-gray-400 text-sm">
-                    Performed by{" "}
-                    <span className="relative inline-flex items-center group">
-                        <a
-                            href="https://github.com/sultanjke"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-semibold text-gray-400 hover:text-black transition"
-                            aria-label="GitHub профайл Sultan Mecheyev"
-                        >
-                            Sultan Mecheyev
-                        </a>
-                        <span className="pointer-events-none absolute bottom-full right-0 hidden w-64 translate-y-2 rounded-2xl border border-black/10 bg-white p-3 text-left text-xs text-gray-500 shadow-2xl transition-all duration-200 group-hover:block">
-                            <span className="block text-sm font-semibold text-gray-900">github.com/sultanjke</span>
-                            <span className="mt-1 block overflow-hidden rounded-xl border border-black/5">
-                                <img
-                                    src="https://opengraph.githubassets.com/1/sultanjke"
-                                    alt="Предпросмотр GitHub профиля Sultan Mecheyev"
-                                    className="h-36 w-full object-cover"
-                                />
-                            </span>
-                            <span className="mt-2 inline-flex items-center text-[11px] text-gray-400">
-                                Откроется в новой вкладке
-                            </span>
-                        </span>
-                    </span>{" "}— Made by{" "}
-                    <span>Humans</span> on{" "}
+                    Designed by{" "}
+                    <LinkPreview url="https://github.com/sultanjke" className="font-semibold text-gray-500" width={320} height={200}>
+                        Sultan Mecheyev
+                    </LinkPreview>{" "}— Made by{" "}
+                    <span className="font-semibold">Humans</span> on{" "}
                     <span className="text-green-500 font-semibold">Earth</span>
                 </div>
             </div>

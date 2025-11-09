@@ -61,6 +61,7 @@ export default function PartnersFeatureCards() {
                       alt={service.name}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width:1024px) 50vw, 25vw"
+                      style={{ objectPosition: '50% 70%' }}
                       className="object-cover"
                     />
                   </div>

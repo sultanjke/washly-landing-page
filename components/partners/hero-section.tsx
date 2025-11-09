@@ -1,5 +1,7 @@
 'use client'
 
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient"
+
 export default function PartnersHeroSection() {
   return (
     <section data-reveal className="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
@@ -22,24 +24,25 @@ export default function PartnersHeroSection() {
                 Добавьте свою автомойку или автосервис в приложение и получите поток новых пользователей
               </p>
               <form className="max-w-md">
-                <div className="rounded-2xl border border-white/20 bg-white/10 bg-clip-padding p-4 backdrop-blur-xl shadow-lg w-85">
+                <div className="rounded-3xl border border-white/20 bg-white/5 bg-clip-padding p-4 backdrop-blur-xl shadow-lg w-85">
                   <label htmlFor="partner-phone" className="sr-only">
                     Номер телефона
                   </label>
-                  <div className="text-white text-lg font-bold text-center mb-5 w-full items-baseline">Оставьте заявку на партнерство</div>
                   <div className="space-y-3">
                     <input
                       id="partner-phone"
                       type="tel"
                       placeholder="+7"
-                      className="w-75 rounded-xl bg-white/20 px-4 py-3 text-gray-300 placeholder:text-gray-300 focus:outline-none"
+                      className="w-75 rounded-2xl bg-white/10 px-4 py-3 text-gray-300 placeholder:text-gray-300 focus:outline-none"
                     />
-                    <button
+                    <HoverBorderGradient
+                      as="button"
                       type="submit"
-                      className="w-75 rounded-xl cursor-pointer bg-white/20 px-4 py-3 text-white transition hover:bg-white/30"
+                      containerClassName="!w-full rounded-4xl border border-white/20"
+                      className="flex !w-full font-bold justify-center py-3 text-base text-white"
                     >
                       Оставить заявку
-                    </button>
+                    </HoverBorderGradient>
                   </div>
                 </div>
               </form>
