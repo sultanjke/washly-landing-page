@@ -25,7 +25,9 @@ const yandex = localFont({
 export const metadata: Metadata = {
   title: "Washly - Современное приложение для автомойки",
   description: "Найди ближайшую к себе мойку, выбери удобное время и оплати онлайн",
-  generator: "v0.app",
+  icons: {
+    icon: '/favicon.ico',
+  }
 }
 
 export default function RootLayout({

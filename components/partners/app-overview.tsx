@@ -42,8 +42,8 @@ export default function PartnersFeaturesPreview() {
                     </p>
             </div>
             <div className="mt-auto">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2x">
-                    <img src={stat.icon} alt={stat.alt} className="h-15 w-15 object-contain" />
+        <div className="flex h-16 w-16 items-center justify-center rounded-2x">
+          <img src={stat.icon} alt={stat.alt} loading="lazy" decoding="async" className="h-15 w-15 object-contain" />
                 </div>
             </div>
         </article>

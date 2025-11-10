@@ -32,14 +32,6 @@ export default function ScrollRevealProvider({ children }: { children: ReactNode
       document.head.appendChild(style)
     }
 
-    const elements = Array.from(
-      document.querySelectorAll<HTMLElement>("[data-reveal]")
-    )
-
-    if (!elements.length) {
-      return
-    }
-
     const observer = new IntersectionObserver(
       (entries, obs) => {
         entries.forEach((entry) => {
@@ -50,6 +42,23 @@ export default function ScrollRevealProvider({ children }: { children: ReactNode
         })
       },
       { threshold: 0.1, rootMargin: "0px 0px 10% 0px" }
+    )
+
+    const observed = new WeakSet<Element>()
+
+    const register = (element: HTMLElement) => {
+      if (observed.has(element)) return
+      observed.add(element)
+
+      if (element.classList.contains("is-visible")) {
+        return
+      }
+
+      observer.observe(element)
+    }
+
+    const elements = Array.from(
+      document.querySelectorAll<HTMLElement>("[data-reveal]")
     )
 
     const revealRemaining = () => {
@@ -65,19 +74,48 @@ export default function ScrollRevealProvider({ children }: { children: ReactNode
       }
     }
 
-    window.requestAnimationFrame(() => {
-      elements.forEach((element) => {
-        if (!element.classList.contains("is-visible")) {
-          observer.observe(element)
-        }
+    const handleInitialElements = () => {
+      if (!elements.length) {
+        return
+      }
+
+      window.requestAnimationFrame(() => {
+        elements.forEach(register)
+        revealRemaining()
       })
-      revealRemaining()
+    }
+
+    handleInitialElements()
+
+    const mutationObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (!(node instanceof HTMLElement)) return
+
+          const revealNodes = node.matches?.("[data-reveal]")
+            ? [node]
+            : Array.from(node.querySelectorAll<HTMLElement>("[data-reveal]"))
+
+          revealNodes.forEach((revealNode) => {
+            elements.push(revealNode)
+            if (!revealNode.classList.contains("is-visible")) {
+              register(revealNode)
+            }
+          })
+        })
+      })
+    })
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
     })
 
     window.addEventListener("scroll", revealRemaining, { passive: true })
 
     return () => {
       window.removeEventListener("scroll", revealRemaining)
+      mutationObserver.disconnect()
       observer.disconnect()
     }
   }, [pathname])

@@ -1,56 +1,69 @@
 'use client'
 
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { useState } from "react"
 
 export default function HeroSection() {
   return (
-    <section data-reveal className="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="relative rounded-3xl overflow-hidden min-h-[400px] lg:min-h-[500px]">
-          <img
+    <section data-reveal className="px-4 pb-12 pt-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="relative min-h-[400px] overflow-hidden rounded-3xl lg:min-h-[500px]">
+          <Image
             src="/new-bg-image.png"
             alt="Hero background"
             aria-hidden="true"
-            loading="eager"
-            style={{ objectPosition: '100% 100%' }}
-            className="absolute inset-0 w-full h-full object-cover object-right z-0"
+            fill
+            priority
+            sizes="100vw"
+            style={{ objectPosition: "100% 100%" }}
+            className="absolute inset-0 z-0 h-full w-full object-cover object-right"
           />
-          <div className="relative z-20 grid lg:grid-cols-12 gap-8 items-center p-2 lg:p-16">
-            <div className="text-white space-y-6 lg:col-span-7 mb-30">
-              <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-balance w-220">
+          <div className="relative z-20 grid items-center gap-8 p-2 lg:grid-cols-12 lg:p-16">
+            <div className="lg:col-span-7 space-y-6 text-white">
+              <h1 className="w-220 text-4xl font-bold leading-tight text-balance lg:text-5xl">
                 Современное приложение для тех, кто ценит время и комфорт
               </h1>
-              <p className="text-2xl font-regular text-white/90 w-125">
+              <p className="w-125 text-2xl text-white/90">
                 Найди ближайшую автомойку, выбери удобное время и оплати онлайн
               </p>
 
               <div className="space-y-2">
-                  <Button className="bg-white text-black hover:bg-gray-100 whitespace-nowrap cursor-pointer w-50 h-10 text-md">
-                    Скачать приложение
-                  </Button>
-                  <div className="flex items-center gap-4 mt-3">
-                    {/* Replace these <img> sources with your real badge images if needed */}
-                    <a
-                      href="#"
-                      className="inline-flex items-center justify-center w-30 h-12 rounded-md overflow-hidden"
-                      aria-label="App Store link"
-                    >
-                      <img src="/badges/app-store-badge.png" alt="App Store" className="w-full h-auto" />
-                    </a>
+                <Button className="text-md h-10 w-50 whitespace-nowrap cursor-pointer bg-white text-black hover:bg-gray-100">
+                  Скачать приложение
+                </Button>
+                <div className="mt-3 flex items-center gap-4">
+                  <a
+                    href="#"
+                    className="inline-flex h-12 w-30 items-center justify-center overflow-hidden rounded-md"
+                    aria-label="App Store link"
+                  >
+                    <img
+                      src="/badges/app-store-badge.png"
+                      alt="App Store"
+                      loading="lazy"
+                      decoding="async"
+                      className="h-auto w-full"
+                    />
+                  </a>
 
-                    <a
-                      href="#"
-                      className="inline-flex items-center justify-center w-30 h-12 rounded-md overflow-hidden"
-                      aria-label="Google Play link"
-                    >
-                      <img src="/badges/google-play-badge.png" alt="Google Play" className="w-full h-auto" />
-                    </a>
-                  </div>
+                  <a
+                    href="#"
+                    className="inline-flex h-12 w-30 items-center justify-center overflow-hidden rounded-md"
+                    aria-label="Google Play link"
+                  >
+                    <img
+                      src="/badges/google-play-badge.png"
+                      alt="Google Play"
+                      loading="lazy"
+                      decoding="async"
+                      className="h-auto w-full"
+                    />
+                  </a>
                 </div>
+              </div>
             </div>
 
-            <div className="relative h-[400px] lg:h-[500px] lg:col-span-5" />
+            <div className="relative h-[400px] lg:col-span-5 lg:h-[500px]" />
           </div>
         </div>
       </div>

@@ -32,11 +32,13 @@ export default function PartnersFeatureCards() {
     <section data-reveal className="px-4 pt-20 pb-16 transition-colors sm:px-6 lg:px-8" id="autoservices">
       <div className="max-w-7xl mx-auto">
         <div className="relative overflow-hidden rounded-[3rem] bg-gray-900 text-white shadow-2xl">
-          <img
+          <Image
             src="/preview-bg-img.png"
             alt="Фон блока партнёров"
             aria-hidden="true"
-            loading="eager"
+            fill
+            priority
+            sizes="100vw"
             className="absolute inset-0 h-full w-full object-cover"
             style={{ objectPosition: "center" }}
           />
@@ -75,6 +77,8 @@ export default function PartnersFeatureCards() {
                       <img
                         src="/rating.png"
                         alt="Рейтинг"
+                        loading="lazy"
+                        decoding="async"
                         className="h-5 w-10"
                       />
                       <span>{service.ratingText}</span>
@@ -84,6 +88,8 @@ export default function PartnersFeatureCards() {
                       <img
                         src="/location.png"
                         alt="Адрес"
+                        loading="lazy"
+                        decoding="async"
                         className="mt-0.5 h-4 w-4"
                       />
                       <span>{service.address}</span>

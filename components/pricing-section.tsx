@@ -64,7 +64,7 @@ export default function PricingSection() {
                   {plan.popular && (
                     <div className="pointer-events-none absolute inset-x-4 top-[-10] pb-6 -translate-y-1/2 flex items-center justify-center gap-2 rounded-xl bg-green-500 py-2 text-md font-regular font-regular tracking-wide text-white shadow-xl">
                       <span>{plan.popularLabel ?? "Привилегированный план"}</span>
-                      <img src="/particles.png" alt="" className="h-4 w-4"/>
+                      <img src="/particles.png" alt="" loading="lazy" decoding="async" className="h-4 w-4"/>
                     </div>
                   )}
                   <div
@@ -76,6 +76,8 @@ export default function PricingSection() {
                       <img
                         src={plan.imageSrc}
                         alt={plan.name}
+                        loading="lazy"
+                        decoding="async"
                         className="absolute inset-0 w-full h-full object-cover"
                       />
                       <div className="relative z-10 h-30 p-4 pl-8 text-white">

@@ -8,28 +8,75 @@ export default function InitialLoader({ children }: { children: ReactNode }) {
   const [isReady, setIsReady] = useState(false)
   const [shouldRenderOverlay, setShouldRenderOverlay] = useState(true)
   const hasMarkedReadyRef = useRef(false)
+  const assetsLoadedRef = useRef(false)
 
   useEffect(() => {
+    if (typeof window !== "undefined" && sessionStorage.getItem("washly-loader-complete")) {
+      hasMarkedReadyRef.current = true
+      assetsLoadedRef.current = true
+      setIsReady(true)
+      setShouldRenderOverlay(false)
+      return
+    }
+
     let fallbackTimer: number | undefined
     let hideTimer: number | undefined
+
+    const criticalAssets = [
+      "/new-bg-image.png",
+      "/app_demonstration_1.png",
+      "/app_demonstration_2.png",
+      "/app_demonstration_3.png",
+      "/download-app-illustration.png",
+    ]
+
+    const preloadImage = (src: string) =>
+      new Promise<void>((resolve) => {
+        const img = new Image()
+        img.decoding = "async"
+        img.src = src
+        if (img.complete) {
+          resolve()
+        } else {
+          img.onload = () => resolve()
+          img.onerror = () => resolve()
+        }
+      })
+
+    const assetPromise = Promise.all(criticalAssets.map(preloadImage)).then(() => {
+      assetsLoadedRef.current = true
+    })
 
     const markReady = () => {
       if (hasMarkedReadyRef.current) return
       hasMarkedReadyRef.current = true
       setIsReady(true)
       hideTimer = window.setTimeout(() => setShouldRenderOverlay(false), 400)
+      if (typeof window !== "undefined") {
+        sessionStorage.setItem("washly-loader-complete", "true")
+      }
+    }
+
+    const handleAssetsAndReadyState = () => {
+      if (assetsLoadedRef.current) {
+        markReady()
+      } else {
+        assetPromise.finally(markReady)
+      }
     }
 
     if (document.readyState === "complete") {
-      hideTimer = window.setTimeout(markReady, 200)
+      assetPromise.finally(() => {
+        hideTimer = window.setTimeout(markReady, 200)
+      })
     } else {
       const handleLoad = () => {
         if (fallbackTimer) window.clearTimeout(fallbackTimer)
-        markReady()
+        handleAssetsAndReadyState()
       }
 
       window.addEventListener("load", handleLoad, { once: true })
-      fallbackTimer = window.setTimeout(markReady, 1500)
+      fallbackTimer = window.setTimeout(markReady, 2500)
 
       return () => {
         window.removeEventListener("load", handleLoad)

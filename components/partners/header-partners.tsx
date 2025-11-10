@@ -1,5 +1,6 @@
 'use client'
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import ThemeToggle from "@/components/theme-toggle"
 
@@ -21,8 +22,21 @@ export default function Header() {
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex items-center gap-12">
                         <Link href="/" className="flex h-8 w-20 items-center">
-                            <img src="/icon-black.png" alt="Washly" className="block h-full w-full object-contain dark:hidden" />
-                            <img src="/icon-white.png" alt="Washly" className="hidden h-full w-full object-contain dark:block" />
+                            <Image
+                                src="/icon-black.png"
+                                alt="Washly"
+                                width={80}
+                                height={32}
+                                priority
+                                className="block h-full w-full object-contain dark:hidden"
+                            />
+                            <Image
+                                src="/icon-white.png"
+                                alt="Washly"
+                                width={80}
+                                height={32}
+                                className="hidden h-full w-full object-contain dark:block"
+                            />
                         </Link>
                         <nav className="hidden items-center gap-8 md:flex">
                             <a

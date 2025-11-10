@@ -1,5 +1,5 @@
+import Image from "next/image"
 import {Button} from "@/components/ui/button"
-import {Apple, Play} from "lucide-react"
 
 export default function DownloadSection() {
     return (
@@ -35,7 +35,14 @@ export default function DownloadSection() {
 
                     </div>
                     {/* Правая карточка */}
-                    <img src="/download-app-illustration.png" className="w-full h-full rounded-4xl" />
+                    <Image
+                        src="/download-app-illustration.png"
+                        alt="Экран приложения Washly"
+                        width={960}
+                        height={720}
+                        loading="lazy"
+                        className="h-full w-full rounded-4xl object-cover"
+                    />
                 </div>
             </div>
         </section>

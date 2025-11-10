@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image"
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient"
 
 export default function PartnersHeroSection() {
@@ -7,13 +8,15 @@ export default function PartnersHeroSection() {
     <section data-reveal className="px-4 pt-24 pb-12 transition-colors sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="relative rounded-3xl overflow-hidden min-h-[400px] lg:min-h-[500px]">
-          <img
+          <Image
             src="/partners-bg-img.png"
             alt="Hero background"
             aria-hidden="true"
-            loading="eager"
-            style={{ objectPosition: '100% 60%' }}
-            className="absolute inset-0 w-full h-full object-cover object-right z-0"
+            fill
+            priority
+            sizes="100vw"
+            style={{ objectPosition: "100% 60%" }}
+            className="absolute inset-0 z-0 h-full w-full object-cover object-right"
           />
           <div className="relative z-20 grid lg:grid-cols-12 gap-8 items-center p-2 lg:p-16">
             <div className="text-white space-y-6 lg:col-span-7 mb-30 pt-10">
