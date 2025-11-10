@@ -27,17 +27,17 @@ export default function PartnersFeaturesPreview() {
   ]
 
   return (
-    <section data-reveal className="py-16 px-4 sm:px-6 lg:px-8">
+    <section data-reveal className="py-16 px-4 transition-colors sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto m-10">
         <div className="grid gap-20 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
         <article
             key={stat.value}
-              className="flex flex-col items-start gap-4 rounded-3xl bg-white/90 p-6 text-gray-900"
+              className="flex flex-col items-start gap-4 rounded-3xl p-6 text-gray-900 dark:text-white"
         >
             <div>
                     <p className="text-4xl font-bold sm:text-5xl">{stat.value}</p>
-                    <p className="mt-2 text-base text-gray-600 sm:text-2xl">
+                    <p className="mt-2 text-base text-gray-600 sm:text-2xl dark:text-gray-300">
                     {stat.label}
                     </p>
             </div>

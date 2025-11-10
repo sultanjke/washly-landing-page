@@ -29,7 +29,7 @@ export default function PartnersFeatureCards() {
   ]
 
   return (
-    <section data-reveal className="pt-20 pb-16 px-4 sm:px-6 lg:px-8" id="autoservices">
+    <section data-reveal className="px-4 pt-20 pb-16 transition-colors sm:px-6 lg:px-8" id="autoservices">
       <div className="max-w-7xl mx-auto">
         <div className="relative overflow-hidden rounded-[3rem] bg-gray-900 text-white shadow-2xl">
           <img

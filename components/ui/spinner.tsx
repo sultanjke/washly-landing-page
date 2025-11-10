@@ -16,7 +16,7 @@ export function Spinner({ className, size = 48, variant = "ring" }: SpinnerProps
   if (variant === "ring") {
     return (
       <svg
-        className={cn("text-black", className)}
+        className={cn("text-foreground", className)}
         width={size}
         height={size}
         viewBox="0 0 44 44"

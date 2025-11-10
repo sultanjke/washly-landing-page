@@ -49,14 +49,14 @@ export default function InitialLoader({ children }: { children: ReactNode }) {
       {shouldRenderOverlay && (
         <div
           className={cn(
-            "fixed inset-0 z-[999] flex items-center justify-center bg-white transition-opacity duration-300",
+            "fixed inset-0 z-[999] flex items-center justify-center bg-background/95 transition-opacity duration-300",
             isReady ? "opacity-0" : "opacity-100"
           )}
           aria-hidden={isReady}
         >
           <div className="flex flex-col items-center gap-4">
-            <Spinner size={56} className="text-black/80" />
-            <p className="text-sm font-medium text-gray-500">Готовим интерфейс…</p>
+            <Spinner size={56} className="text-foreground/80" />
+            <p className="text-sm font-medium text-muted-foreground">Готовим интерфейс…</p>
           </div>
         </div>
       )}

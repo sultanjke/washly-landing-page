@@ -10,7 +10,7 @@ import AppBenefits from "@/components/partners/app-preview"
 
 export default function PartnersPage() {
   return (
-    <div id="home" className="min-h-screen bg-white">
+    <div id="home" className="min-h-screen bg-background text-foreground transition-colors">
   <HeaderPartners />
       <main>
   <PartnersHeroSection />

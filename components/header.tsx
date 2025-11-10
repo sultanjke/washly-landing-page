@@ -1,6 +1,7 @@
 'use client'
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import ThemeToggle from "@/components/theme-toggle"
 
 export default function Header() {
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -15,31 +16,49 @@ export default function Header() {
     }
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-[0_25px_20px_-6px_rgba(0,0,0,0.12)] ring-1 ring-gray-100">
+        <header className="fixed top-0 left-0 right-0 z-50 border-b border-black/5 bg-white/80 backdrop-blur-sm shadow-[0_25px_20px_-6px_rgba(0,0,0,0.13)] transition-colors duration-300 dark:border-white/10 dark:bg-black/70">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16">
+                <div className="flex h-16 items-center justify-between">
                     <div className="flex items-center gap-12">
-                        <Link href="/" className="h-8 w-20 flex items-center">
-                            <img src="/icon-black.png" alt="Washly" />
+                        <Link href="/" className="flex h-8 w-20 items-center">
+                            <img src="/icon-black.png" alt="Washly" className="block h-full w-full object-contain dark:hidden" />
+                            <img src="/icon-white.png" alt="Washly" className="hidden h-full w-full object-contain dark:block" />
                         </Link>
-                        <nav className="hidden md:flex items-center gap-8">
-                            <a href="#home" onClick={(e) => handleScroll(e, "#home")} className="text-sm text-gray-600 hover:text-gray-900">
+                        <nav className="hidden items-center gap-8 md:flex">
+                            <a
+                                href="#home"
+                                onClick={(e) => handleScroll(e, "#home")}
+                                className="text-sm text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+                            >
                                 Главная
                             </a>
-                            <a href="#advantages" onClick={(e) => handleScroll(e, "#advantages")} className="text-sm text-gray-600 hover:text-gray-900">
+                            <a
+                                href="#advantages"
+                                onClick={(e) => handleScroll(e, "#advantages")}
+                                className="text-sm text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+                            >
                                 Преимущества
                             </a>
-                            <a href="#partners" onClick={(e) => handleScroll(e, "#pricing")} className="text-sm text-gray-600 hover:text-gray-900">
+                            <a
+                                href="#partners"
+                                onClick={(e) => handleScroll(e, "#pricing")}
+                                className="text-sm text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+                            >
                                 Тарифы
                             </a>
-                            <Link href="/partners" className="text-sm text-gray-600 hover:text-gray-900">
+                            <Link
+                                href="/partners"
+                                className="text-sm text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+                            >
                                 Партнёрам
                             </Link>
                         </nav>
                     </div>
-                    <div className="hidden md:flex">
-                        <img src="themes/darktheme.png" alt="" className="w-4 h-4 mr-5 mt-3" />
-                        <Button className="bg-black text-white hover:bg-gray-800 rounded-xl px-6 cursor-pointer">Скачать</Button>
+                    <div className="hidden items-center gap-4 md:flex">
+                        <ThemeToggle />
+                        <Button className="rounded-xl bg-black px-6 text-white transition-colors hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-300">
+                            Скачать
+                        </Button>
                     </div>
                 </div>
             </div>

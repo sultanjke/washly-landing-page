@@ -5,6 +5,7 @@ import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
 import ScrollRevealProvider from "@/components/scroll-reveal-provider"
 import InitialLoader from "@/components/initial-loader"
+import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -33,13 +34,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${yandex.className} antialiased`}>
-        <InitialLoader>
-          <ScrollRevealProvider>
-            {children}
-          </ScrollRevealProvider>
-        </InitialLoader>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${yandex.className} antialiased bg-background text-foreground transition-colors duration-300`}>
+        <ThemeProvider>
+          <InitialLoader>
+            <ScrollRevealProvider>
+              {children}
+            </ScrollRevealProvider>
+          </InitialLoader>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

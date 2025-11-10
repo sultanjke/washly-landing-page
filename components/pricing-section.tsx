@@ -17,7 +17,7 @@ export default function PricingSection() {
     {
       name: "Базовый",
       price: "2990",
-      priceDiscount: "‎ ",
+      priceDiscount: "‎",
       features: [true, true, true, true, false, false, false, false],
       popular: false,
       imageSrc: "/images/basic-plan.png",
@@ -42,7 +42,7 @@ export default function PricingSection() {
   ];
 
   return (
-    <section data-reveal className="py-16 px-4 sm:px-6 lg:px-8" id="pricing">
+    <section data-reveal className="py-16 px-4 transition-colors sm:px-6 lg:px-8" id="pricing">
       <div className="max-w-7xl mx-auto">
         <div className="relative rounded-3xl overflow-hidden">
           <img
@@ -68,7 +68,7 @@ export default function PricingSection() {
                     </div>
                   )}
                   <div
-                    className={`relative z-10 rounded-2xl bg-white p-4 shadow-md transition-all duration-300 ${
+                    className={`relative z-10 rounded-2xl border border-black/5 bg-white/95 p-4 shadow-md transition-all duration-300 ${
                       plan.popular ? "shadow-2xl" : ""
                     }`}
                   >
@@ -78,7 +78,7 @@ export default function PricingSection() {
                         alt={plan.name}
                         className="absolute inset-0 w-full h-full object-cover"
                       />
-                      <div className="relative z-10 p-4 text-white pl-8 h-30">
+                      <div className="relative z-10 h-30 p-4 pl-8 text-white">
                         <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                       </div>
                     </div>
@@ -86,14 +86,14 @@ export default function PricingSection() {
                     <div className="text-left mt-auto">
                       <div className="flex items-end gap-2 pl-3">
                         <div className="flex flex-col leading-none">
-                          <span className="text-sm font-bold text-gray-300 line-through -mb-0.5">
+                          <span className="-mb-0.5 text-sm font-bold text-gray-300 line-through">
                             {plan.priceDiscount}
                           </span>
                           <span className="text-4xl font-bold text-gray-900">
                             {plan.price}₸
                           </span>
                         </div>
-                        <span className="text-gray-500 pb-1">в месяц</span>
+                        <span className="text-gray-500">в месяц</span>
                       </div>
                     </div>
 
@@ -105,7 +105,7 @@ export default function PricingSection() {
                           className="flex items-center gap-2 text-sm"
                         >
                           <BadgeCheckIcon
-                            className={`w-3 h-3 shrink-0 ${plan.features[idx] ? "text-black" : "text-gray-400"}`}
+                            className={`h-3 w-3 shrink-0 transition-colors ${plan.features[idx] ? "text-black": "text-gray-400"}`}
                           />
                           <span className={`${plan.features[idx] ? "text-black" : "text-gray-400"}`}>{benefit}</span>
                         </li>
@@ -113,7 +113,7 @@ export default function PricingSection() {
                     </ul>
 
                     <div className="mt-6">
-                      <Button className="w-full rounded-lg border font-bold border-gray-300 text-black bg-white hover:bg-gray-100 cursor-pointer hover:shadow-xl transition">
+                      <Button className="w-full cursor-pointer rounded-lg border border-gray-300 bg-white font-bold text-black transition hover:bg-gray-100 hover:shadow-xl">
                         Скачать приложение
                       </Button>
                     </div>

@@ -1,15 +1,21 @@
 
 export default function FeaturesPreview() {
   return (
-    <section data-reveal className="py-16 px-4 mt-5 mb-48 sm:px-6 lg:px-8" id="advantages">
+    <section
+      data-reveal
+      className="mt-5 mb-48 px-4 py-16 transition-colors sm:px-6 lg:px-8"
+      id="advantages"
+    >
       <div className="max-w-7xl mx-auto text-center">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6">
           {/*<Sparkles className="w-8 h-8 text-amber-500" />*/}
             <img src="Dizzy.png" alt="Dizzy" />
         </div>
 
-        <h2 className="text-4xl font-bold mb-4">Чисто, удобно, быстро.</h2>
-        <p className="text-gray-400 mb-16 text-xl">
+        <h2 className="mb-4 text-4xl font-bold text-gray-900 transition-colors dark:text-white">
+          Чисто, удобно, быстро.
+        </h2>
+        <p className="mb-16 text-xl text-gray-500 transition-colors dark:text-gray-400">
           Не трать время в очередях. Выбирай мойку, бронируй время и оплачивай онлайн
         </p>
 

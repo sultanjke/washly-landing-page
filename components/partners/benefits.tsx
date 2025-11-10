@@ -54,9 +54,9 @@ const benefits: Benefit[] = [
 
 export default function PartnersBenefitsSection() {
   return (
-    <section data-reveal className="py-24 px-4 sm:px-6 lg:px-8" id="benefits">
+    <section data-reveal className="py-24 px-4 transition-colors sm:px-6 lg:px-8" id="benefits">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">
+        <h2 className="text-3xl font-bold leading-tight text-gray-900 transition-colors sm:text-4xl dark:text-white">
           Почему сотрудничество с Washly.kz — выгодно?
         </h2>
       </div>
@@ -67,7 +67,7 @@ export default function PartnersBenefitsSection() {
             key={benefit.title}
             radius={420}
             color="rgba(59,130,246,0.15)"
-            className="relative h-full overflow-hidden rounded-3xl border-3 border-[#1e2b3c] bg-[#06090E] p-8 text-white shadow-xl"
+            className="relative h-full overflow-hidden rounded-3xl border-1 border-[#1e2b3c] bg-[#06090E] p-8 text-white shadow-xl"
           >
             <article className="relative z-10 flex h-full flex-col gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-gray-700">

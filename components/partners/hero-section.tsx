@@ -4,7 +4,7 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient"
 
 export default function PartnersHeroSection() {
   return (
-    <section data-reveal className="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+    <section data-reveal className="px-4 pt-24 pb-12 transition-colors sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="relative rounded-3xl overflow-hidden min-h-[400px] lg:min-h-[500px]">
           <img

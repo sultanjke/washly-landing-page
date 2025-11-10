@@ -8,7 +8,7 @@ import DownloadSection from "@/components/download-section"
 import Footer from '@/components/footer'
 export default function Home() {
   return (
-    <div id="home" className="min-h-screen bg-white">
+    <div id="home" className="min-h-screen bg-background text-foreground transition-colors">
       <Header />
       <main>
         <HeroSection />
