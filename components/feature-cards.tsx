@@ -50,9 +50,9 @@ export default function FeatureCards() {
   ];
 
   return (
-    <section data-reveal className="flex min-h-screen items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
+    <section data-reveal className="flex items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto w-full max-w-5xl">
-  <div className="grid w-180 mx-auto gap-4 sm:grid-cols-1 md:grid-cols-2">
+        <div className="grid w-180 mx-auto gap-4 sm:grid-cols-1 md:grid-cols-2">
           {features.map((f, i) => (
             <article
               key={i}
@@ -91,9 +91,6 @@ export default function FeatureCards() {
                     {f.description}
                   </p>
                 </header>
-
-                {/* Spacer to push deco item off the text a bit */}
-                <div className="h-20" />
               </div>
 
               {/* Floating 3D item */}
