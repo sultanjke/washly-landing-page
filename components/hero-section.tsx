@@ -18,12 +18,12 @@ export default function HeroSection() {
             style={{ objectPosition: "100% 100%" }}
             className="absolute inset-0 z-0 h-full w-full object-cover object-right"
           />
-          <div className="relative z-20 grid items-center gap-8 p-2 lg:grid-cols-12 lg:p-16">
+          <div className="relative z-20 grid items-center gap-8 p-16 grid-cols-12 lg:p-16">
             <div className="lg:col-span-7 space-y-6 text-white">
-              <h1 className="w-220 text-4xl font-bold leading-tight text-balance lg:text-5xl">
+              <h1 className="lg:w-220  md:w-110 w-55 text-2xl font-bold leading-tight text-balance  lg:text-5xl">
                 Современное приложение для тех, кто ценит время и комфорт
               </h1>
-              <p className="w-125 text-2xl text-white/90">
+              <p className="md:w-125 w-60 md:text-2xl text-xl text-white/90">
                 Найди ближайшую автомойку, выбери удобное время и оплати онлайн
               </p>
 
