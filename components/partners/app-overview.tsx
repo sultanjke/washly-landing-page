@@ -29,7 +29,7 @@ export default function PartnersFeaturesPreview() {
   return (
     <section data-reveal className="py-16 px-4 transition-colors sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto m-10">
-        <div className="grid gap-20 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-20 grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
         <article
             key={stat.value}

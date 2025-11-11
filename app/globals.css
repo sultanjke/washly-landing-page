@@ -3,6 +3,10 @@
 @plugin 'tailwindcss-animate';
 @import 'tw-animate-css';
 
+/*body{*/
+/*    background: #000;*/
+/*}*/
+
 @custom-variant dark (&:is(.dark *));
 
 :root {

@@ -6,7 +6,7 @@ export default function AppPreview() {
           <article className="relative overflow-hidden rounded-[3rem] bg-slate-100 shadow-2xl transition-colors dark:bg-neutral-900">
             <div className="absolute inset-0 z-10" />
             <div className="absolute inset-x-0 top-11 z-20 px-8 pt-10 sm:px-10">
-              <h3 className="text-4xl font-bold leading-tight text-white text-center">
+              <h3 className="text-2xl md:text-4xl font-bold leading-tight  text-white text-center">
                 <span className="block">Панель управления</span>
                 <span className="block">автомойкой</span>
               </h3>
@@ -20,7 +20,7 @@ export default function AppPreview() {
           <article className="relative overflow-hidden rounded-[3rem] bg-slate-100 shadow-2xl transition-colors dark:bg-neutral-900">
             <div className="absolute inset-0 z-10" />
             <div className="absolute inset-x-0 top-11 z-20 px-8 pt-10 sm:px-10">
-              <h3 className="text-4xl font-bold text-white text-center">
+              <h3 className="md:text-4xl text-2xl font-bold text-white text-center">
                 <span className="block">Статистика посещений</span>
                 <span className="block">и доходов</span>
               </h3>

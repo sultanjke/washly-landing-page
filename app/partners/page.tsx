@@ -9,19 +9,19 @@ import HeaderPartners from "@/components/partners/header-partners"
 import AppBenefits from "@/components/partners/app-preview"
 
 export default function PartnersPage() {
-  return (
-    <div id="home" className="min-h-screen bg-background text-foreground transition-colors">
-  <HeaderPartners />
-      <main>
-  <PartnersHeroSection />
-  <PartnersAppOverview />
-  <PartnersAutoservices />
-  <PartnersWorkingBenefits />
-  <PartnersBenefitsSection />
-  <AppBenefits />
-  <PartnersFilloutForm />
-      </main>
-  <PartnersFooter />
-    </div>
-  )
+    return (
+        <div id="home" className="min-h-screen bg-background text-foreground transition-colors">
+            <HeaderPartners/>
+            <main>
+                <PartnersHeroSection/>
+                {/*<PartnersAppOverview/>*/}
+                <PartnersAutoservices/>
+                <PartnersWorkingBenefits/>
+                <PartnersBenefitsSection/>
+                <AppBenefits/>
+                <PartnersFilloutForm/>
+            </main>
+            <PartnersFooter/>
+        </div>
+    )
 }
