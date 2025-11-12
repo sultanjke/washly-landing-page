@@ -1,8 +1,6 @@
 'use client'
-
 import Image from "next/image"
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient"
-
 export default function PartnersHeroSection() {
   return (
     <section data-reveal className="px-4 pt-24 pb-12 transition-colors sm:px-6 lg:px-8">
@@ -18,12 +16,12 @@ export default function PartnersHeroSection() {
             style={{ objectPosition: "100% 60%" }}
             className="absolute inset-0 z-0 h-full w-full object-cover object-right"
           />
-          <div className="relative z-20 grid lg:grid-cols-12 gap-8 items-center p-2 lg:p-16">
+          <div className="relative z-20 grid grid-cols-2 lg:grid-cols-12 gap-8 items-center p-6 lg:p-16">
             <div className="text-white space-y-6 lg:col-span-7 mb-30 pt-10">
-              <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-balance w-220">
+              <h1 className="md:text-4xl text-2xl lg:text-5xl font-bold leading-tight text-balance md:w-220 w-110">
                 Станьте нашим партнером
               </h1>
-              <p className="text-2xl font-regular text-white/90 w-125">
+              <p className="md:text-2xl text-lg font-regular text-white/90 md:w-125 w-60">
                 Добавьте свою автомойку или автосервис в приложение и получите поток новых пользователей
               </p>
               <form className="max-w-md">
@@ -50,7 +48,6 @@ export default function PartnersHeroSection() {
                 </div>
               </form>
             </div>
-
             <div className="relative h-[400px] lg:h-[500px] lg:col-span-5" />
           </div>
         </div>

@@ -24,7 +24,7 @@ const DownloadSection = dynamic(() => import("@/components/download-section"), {
 })
 export default function Home() {
   return (
-    <div id="home" className="min-h-screen bg-background text-foreground transition-colors">
+    <div id="home" className="min-h-screen bg-background text-foreground transition-colors ">
       <Header />
       <main>
         <HeroSection />

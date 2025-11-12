@@ -37,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${yandex.className} antialiased bg-background text-foreground transition-colors duration-300`}>
+      <body className={`${yandex.className} antialiased bg-background text-foreground transition-colors duration-300 `}>
         <ThemeProvider>
           <InitialLoader>
             <ScrollRevealProvider>
