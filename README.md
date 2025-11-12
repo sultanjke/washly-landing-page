@@ -1,6 +1,6 @@
 # Washly Landing Page
 
-Marketing site for Washly — an on-demand car wash platform — built with Next.js 16, Tailwind CSS 4.
+Washly — an on-demand car wash platform — built with Next.js 16, Tailwind CSS 4.
 
 [Production Live](https://washly.kz)
 
