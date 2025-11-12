@@ -17,8 +17,8 @@ export default function Header() {
     }
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50 border-b border-black/5 bg-white/80 backdrop-blur-sm shadow-[0_25px_20px_-6px_rgba(0,0,0,0.13)] transition-colors duration-300 dark:border-white/10 dark:bg-black/70">
-            <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="fixed top-0 left-0 right-0 z-50 border-b border-black/5 bg-white/80 backdrop-blur-sm shadow-[0_25px_20px_-6px_rgba(0,0,0,0.13)] transition-colors duration-300 dark:border-white/10 dark:bg-black/70">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex items-center gap-12">
                         <Link href="/" className="flex h-8 w-20 items-center">
