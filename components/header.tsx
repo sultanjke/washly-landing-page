@@ -112,8 +112,8 @@ export default function Header() {
 
                     {isMenuOpen && (
                         <div className="absolute left-0 right-0 top-full mt-3 md:hidden">
-                            <div className="rounded-2xl backdrop-blur-lg border border-black/5 bg-white/95 p-5 shadow-2xl dark:border-white/10 dark:bg-black/90">
-                                <div className="flex flex-col gap-3">
+                            <div className="rounded-2xl border border-black/5 bg-white/95 p-5 shadow-2xl dark:border-white/10 dark:bg-black/90">
+                                <div className="flex flex-col gap-3 ">
                                     <div className="flex flex-col gap-2">
                                         {navItems.map((item) => (
                                             <a
