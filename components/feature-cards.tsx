@@ -48,7 +48,7 @@ export default function FeatureCards() {
     return (
         <section data-reveal className="flex items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
             <div className="mx-auto w-full max-w-5xl">
-                <div className="mx-auto grid w-full gap-4 sm:grid-cols-1 md:grid-cols-2">
+                <div className="mx-auto grid w-full md:w-200 gap-4 sm:grid-cols-1 md:grid-cols-2">
                     {features.map((f, i) => (
                         <article
                             key={i}
@@ -90,17 +90,17 @@ export default function FeatureCards() {
                                 className={[
                                     "absolute z-20 select-none pointer-events-none drop-shadow-[0_25px_45px_rgba(0,0,0,0.35)]",
                                     // базовая вертикаль
-                                    "bottom-[-8px] sm:bottom-[-10px] md:bottom-[-12px]",
+                                    "bottom-[-85px] sm:bottom-[-10px] md:bottom-[-12px]",
                                     // горизонталь в зависимости от стороны и брейкпоинта
                                     f.decoSide === "left"
                                         ? "left-[-18px] sm:left-[-22px] md:left-[-54px] lg:left-[-88px]"
-                                        : "right-[-18px] sm:right-[-22px] md:right-[-34px] lg:right-[-88px]",
+                                        : "right-[-18px] sm:right-[-22px] md:right-[-54px] lg:right-[-88px]",
                                 ].join(" ")}
                                 style={
                                     {
                                         // адаптивный размер: от 96px до 220px, относительно ширины вьюпорта
                                         // можно подстроить 18–22vw под свой макет
-                                        ["--item" as any]: "clamp(96px, 20vw, 220px)",
+                                        ["--item" as any]: "clamp(180px, 20vw, 220px)",
                                         width: "var(--item)",
                                         height: "var(--item)",
                                     } as React.CSSProperties
@@ -113,7 +113,7 @@ export default function FeatureCards() {
                                     // объект не обрезаем, чтобы сохранить пропорции
                                     className="object-contain"
                                     // корректные подсказки для рендера (подстраиваются под брейкпоинты)
-                                    sizes="(max-width: 640px) 32vw, (max-width: 768px) 24vw, 18vw"
+                                    sizes="(max-width: 640px) 32vw, (max-width: 768px) 24vw, 20vw"
                                     priority={false}
                                 />
                             </div>

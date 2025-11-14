@@ -52,13 +52,17 @@ export default function PricingSection() {
           />
           <div className="relative rounded-3xl p-8 lg:p-16">
             <div className="text-center text-white mb-12">
-              <h2 className="text-4xl font-bold mb-4">Выбери свой уровень чистоты</h2>
+              <h2 className="text-4xl font-bold mt-5 mb-5">
+                Выбери свой
+                <br />
+                 уровень чистоты
+              </h2>
               <p className="text-white/80 max-w-3xl mx-auto pt-3 w-90 text-lg mb-20">
                 Стань участником клуба и получай доступ к профессиональному уходу, приоритетное обслуживание и персональные бонусы.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-3">
+            <div className="grid md:grid-cols-3 gap-12">
               {plans.map((plan, index) => (
                 <div key={index} className="relative">
                   {plan.popular && (

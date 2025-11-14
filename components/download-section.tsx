@@ -8,8 +8,8 @@ export default function DownloadSection() {
                 <div className="grid md:grid-cols-2 gap-6">
                     {/* Левая карточка */}
                     <div
-                        className="flex h-full w-full flex-col items-start justify-center rounded-4xl bg-black p-7 text-white lg:p-6 lg:px-12">
-                        <h3 className="text-[2rem] font-bold mb-3">
+                        className="flex h-full w-full flex-col items-start justify-center rounded-4xl bg-[#0A23D5] p-7 text-white lg:p-6 lg:px-12">
+                        <h3 className="text-[2rem] font-bold mb-3 mt-5">
                             Больше возможностей в приложении Washly.kz
                         </h3>
                         <p className="mb-8 text-[1.2rem] text-white">

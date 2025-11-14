@@ -21,7 +21,7 @@ export default function PartnersDownloadSection() {
                         />
                         <button
                             type="submit"
-                            className="w-full max-w-44 rounded-2xl bg-blue-500 px-6 py-3 text-base cursor-pointer text-white shadow-lg transition hover:bg-blue-600"
+                            className="w-full max-w-44 rounded-2xl bg-[#4C85FF] px-6 py-3 text-base cursor-pointer text-white shadow-lg transition hover:bg-[#4DA6FF]"
                         >
                             Оставить заявку
                         </button>

@@ -1,25 +1,25 @@
 export default function PartnersFeaturesPreview() {
   const stats = [
     {
-      value: "5",
-      label: "лет работаем в сфере автомойки",
+      value: "1",
+      label: "год работаем в сфере автомойки",
       icon: "/achievementsIcons/trophy.png",
       alt: "trophy",
     },
     {
-      value: "+1 млн",
+      value: "+100к",
       label: "регистраций в приложении",
       icon: "/achievementsIcons/ppl.png",
       alt: "ppl",
     },
     {
-      value: "6",
-      label: "стран и 28 городов по всему миру",
+      value: "2",
+      label: "страны и 10 городов по всему миру",
       icon: "/achievementsIcons/worldwide.png",
       alt: "worldwide",
     },
     {
-      value: "2454",
+      value: "100+",
       label: "партнеров во всех странах",
       icon: "/achievementsIcons/handshake.png",
       alt: "handshake",

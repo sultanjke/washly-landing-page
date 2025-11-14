@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <section data-reveal className="px-4 pb-12 pt-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="relative min-h-[400px] overflow-hidden rounded-3xl lg:min-h-[500px]">
+        <div className="relative min-h-[800px] overflow-hidden rounded-4xl lg:min-h-[100px]">
           <Image
             src="/new-bg-image.png"
             alt="Hero background"
@@ -15,23 +15,31 @@ export default function HeroSection() {
             fill
             priority
             sizes="100vw"
-            style={{ objectPosition: "100% 100%" }}
-            className="absolute inset-0 z-0 h-full w-full object-cover object-right"
+            style={{ objectFit: "cover", objectPosition: "65% 100%" }}
+            className="absolute inset-0 z-0 h-full w-full"
           />
-          <div className="relative z-20 grid items-center gap-8 p-16 grid-cols-12 lg:p-16">
-            <div className="lg:col-span-7 space-y-6 text-white">
-              <h1 className="lg:w-220  md:w-110 w-55 text-2xl font-bold leading-tight text-balance  lg:text-5xl">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 z-10"
+            style={{
+              background: "radial-gradient(circle at 50% 35%, rgba(7, 10, 20, 0.05), rgba(3, 6, 12, 0.75))",
+              mixBlendMode: "multiply",
+            }}
+          />
+          <div className="relative z-20 grid grid-cols-1 items-center gap-8 p-10 sm:p-12 lg:grid-cols-12 lg:p-16">
+            <div className="flex flex-col items-center space-y-8 text-white text-center lg:col-span-7 lg:items-start lg:text-left">
+              <h1 className="lg:w-220 max-w-[55ch] text-balance text-4xl sm:text-4xl md:text-5xl lg:text-5xl tracking-light font-bold leading-tight lg:max-w-[110ch]">
                 Современное приложение для тех, кто ценит время и комфорт
               </h1>
-              <p className="md:w-125 w-60 md:text-2xl text-xl text-white/90">
+              <p className="w-full max-w-[60ch] text-xl text-white/90 md:max-w-[125ch] md:text-2xl">
                 Найди ближайшую автомойку, выбери удобное время и оплати онлайн
               </p>
 
-              <div className="space-y-2">
-                <Button className="text-md h-10 w-50 whitespace-nowrap cursor-pointer bg-white text-black hover:bg-gray-100">
+              <div className="flex w-full flex-col items-center gap-4 sm:items-start">
+                <Button className="text-md h-10 w-50 cursor-pointer whitespace-nowrap bg-[#4C85FF] text-white hover:bg-[#4DA6FF] lg:self-start">
                   Скачать приложение
                 </Button>
-                <div className="mt-3 flex items-center gap-4">
+                <div className="flex items-center gap-4 justify-center lg:justify-start">
                   <a
                     href="#"
                     className="inline-flex h-12 w-30 items-center justify-center overflow-hidden rounded-md"
@@ -63,7 +71,7 @@ export default function HeroSection() {
               </div>
             </div>
 
-            <div className="relative h-[400px] lg:col-span-5 lg:h-[500px]" />
+            <div className="relative hidden h-[400px] lg:col-span-5 lg:block lg:h-[500px]" />
           </div>
         </div>
       </div>

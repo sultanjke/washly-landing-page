@@ -16,13 +16,13 @@ export default function HowItWorks() {
                 <div className="inline-flex items-center justify-center w-16 h-16 mb-6">
                     <img src="/Glowing%20Star.png"/>
                 </div>
-                <h2 className="mb-3 text-5xl font-bold text-gray-900 transition-colors dark:text-white">Как это работает?</h2>
+                <h2 className="mb-3 text-4xl font-bold text-gray-900 transition-colors dark:text-white">Как это работает?</h2>
                 <p className="mb-16 text-xl text-gray-500 transition-colors dark:text-gray-400">Начните за минуты, мойтесь за секунды</p>
                 <div className="relative mx-auto sm:mt-4">
                     <div
                         className="
                           absolute left-0 right-0 top-1/4 -translate-y-1/2
-                          h-[0.2rem] bg-black dark:bg-[#4C85FF]
+                          h-[0.2rem] bg-[#4C85FF] dark:bg-[#4C85FF]
                           hidden sm:block
                           mask-[linear-gradient(90deg,transparent,black_12%,black_88%,transparent)]
                         "
@@ -32,7 +32,7 @@ export default function HowItWorks() {
                             <div key={i} className="relative z-10 flex flex-col items-center text-center">
                                 {/* Чёрный номер поверх линии */}
                                 <div
-                                    className="mb-4 flex h-16 w-16 items-center justify-center rounded-3xl bg-black text-3xl font-bold text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] sm:h-18 sm:w-18 dark:bg-[#4C85FF] dark:text-white">
+                                    className="mb-4 flex h-16 w-16 items-center justify-center rounded-3xl bg-[#4C85FF] text-3xl font-bold text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] sm:h-18 sm:w-18 dark:bg-[#4C85FF] dark:text-white">
                                     {s.number}
                                 </div>
                                 <h3 className="mb-1 text-lg font-semibold text-gray-900 sm:text-xl dark:text-white">{s.title}</h3>

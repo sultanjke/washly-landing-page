@@ -42,6 +42,14 @@ export default function PartnersFeatureCards() {
             className="absolute inset-0 h-full w-full object-cover"
             style={{ objectPosition: "center" }}
           />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 z-10"
+            style={{
+              background: "radial-gradient(circle at 50% 35%, rgba(7, 10, 20, 0.05), rgba(3, 6, 12, 0.75))",
+              mixBlendMode: "multiply",
+            }}
+          />
 
           <div className="relative z-10 px-6 py-16 sm:px-10 lg:px-16">
             <div className="mx-auto max-w-3xl text-center">
