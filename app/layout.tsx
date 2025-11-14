@@ -3,7 +3,6 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
-import ScrollRevealProvider from "@/components/scroll-reveal-provider"
 import InitialLoader from "@/components/initial-loader"
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
@@ -40,9 +39,8 @@ export default function RootLayout({
       <body className={`${yandex.className} antialiased bg-background text-foreground transition-colors duration-300 `}>
         <ThemeProvider>
           <InitialLoader>
-            <ScrollRevealProvider>
-              {children}
-            </ScrollRevealProvider>
+            {/* ScrollRevealProvider temporarily disabled for performance testing */}
+            {children}
           </InitialLoader>
         </ThemeProvider>
         <Analytics />

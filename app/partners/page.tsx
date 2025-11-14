@@ -14,7 +14,7 @@ export default function PartnersPage() {
             <HeaderPartners/>
             <main>
                 <PartnersHeroSection/>
-                <PartnersAppOverview/>
+                {/* <PartnersAppOverview/> */}
                 <PartnersAutoservices/>
                 <PartnersWorkingBenefits/>
                 <PartnersBenefitsSection/>
