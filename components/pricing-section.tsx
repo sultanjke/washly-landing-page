@@ -57,7 +57,7 @@ export default function PricingSection() {
                 <br />
                  уровень чистоты
               </h2>
-              <p className="text-white/80 max-w-3xl mx-auto pt-3 w-80 text-lg mb-20">
+              <p className="text-white/80 max-w-3xl mx-auto pt-3 w-75 text-lg mb-20">
                 Стань участником клуба и получай доступ к профессиональному уходу, приоритетное обслуживание и персональные бонусы.
               </p>
             </div>
