@@ -102,7 +102,7 @@ export default function FeaturesPreview() {
                 <div className="md:hidden">
                     <div
                         ref={sliderViewportRef}
-                        className={`${styles.maskEdges} ${styles.noScrollbar} -mx-4 overflow-x-auto px-4 pb-4`}
+                        className={`${styles.maskEdges} ${styles.noScrollbar} -mx-4 overflow-x-auto px-4`}
                     >
                         <div
                             ref={sliderTrackRef}
@@ -132,7 +132,7 @@ export default function FeaturesPreview() {
                         </div>
                     </div>
 
-                    <div className="mt-6 flex justify-center gap-3" role="tablist" aria-label="Навигация по экранам">
+                    <div className="mt-[-100] flex justify-center gap-3" role="tablist" aria-label="Навигация по экранам">
                         {mobileSlides.map((_, index) => {
                             const isActive = index === activeSlide
                             return (
