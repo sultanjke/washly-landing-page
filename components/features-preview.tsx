@@ -3,11 +3,6 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import styles from "@/styles/FeaturesPreview.module.css";
-import { motion, MotionConfig, ViewportOptions, Variants } from "framer-motion";
-
-const viewport: ViewportOptions = { once: true, amount: 0.45 }
-
-const phoneVariants: Variants = { initial: { opacity: 0, scale: 0.92, y: 60, }, visible: (custom: number) => ({ opacity: 1, scale: 1, y: 0, transition: { delay: custom }, }), }
 
 export default function FeaturesPreview() {
     const mobileSlides = [
@@ -90,25 +85,19 @@ export default function FeaturesPreview() {
                 <p className="mb-30 text-xl text-gray-500 transition-colors dark:text-gray-400">
                     Не трать время в очередях. Выбирай мойку, бронируй время и оплачивай онлайн
                 </p>
-                <MotionConfig transition={{type: "spring", stiffness: 220, damping: 24, mass: 0.9}}>
-                    <div className="relative mx-auto h-[680px] hidden md:block max-w-5xl">
-                        <motion.div variants={phoneVariants} initial="initial" whileInView="visible" viewport={viewport}
-                                    custom={0.12}
-                                    className="absolute left-22 top-[58%] z-10 w-[17.7rem] -translate-y-1/2 transform-gpu will-change-transform">
-                            <Image src="/app_demonstration_2.png" alt="App screen navigation" width={284} height={586}
-                                   loading="lazy" className="h-auto w-full"/></motion.div>
-                        <motion.div variants={phoneVariants} initial="initial" whileInView="visible" viewport={viewport}
-                                    custom={0}
-                                    className="absolute bottom-1 left-1/2 z-20 w-[24rem] -translate-x-1/2 translate-y-20 transform-gpu will-change-transform">
-                            <Image src="/app_demonstration_3.png" alt="App home screen" width={384} height={768}
-                                   priority className="h-auto w-full"/></motion.div>
-                        <motion.div variants={phoneVariants} initial="initial" whileInView="visible" viewport={viewport}
-                                    custom={0.2}
-                                    className="absolute right-22 top-[58%] z-10 w-68 -translate-y-1/2 transform-gpu will-change-transform">
-                            <Image src="/app_demonstration_1.png" alt="App booking screen" width={272} height={552}
-                                   loading="lazy" className="h-auto w-full"/></motion.div>
+                <div className="relative mx-auto hidden h-[640px] max-w-5xl md:block">
+                    <div className="absolute inset-0" aria-hidden={true}>
+                        <div className="absolute left-22 top-1/2 z-10 w-[17.7rem] -translate-y-1/2 transform-gpu">
+                            <Image src="/app_demonstration_2.png" alt="App screen navigation" width={284} height={586} loading="lazy" className="h-auto w-full" />
+                        </div>
+                        <div className="absolute left-1/2 top-1/2 z-20 w-[24rem] -translate-x-1/2 transform-gpu">
+                            <Image src="/app_demonstration_3.png" alt="App home screen" width={384} height={768} priority className="h-auto w-full" />
+                        </div>
+                        <div className="absolute right-22 top-1/2 z-10 w-68 -translate-y-1/2 transform-gpu">
+                            <Image src="/app_demonstration_1.png" alt="App booking screen" width={272} height={586} loading="lazy" className="h-auto w-full" />
+                        </div>
                     </div>
-                </MotionConfig>
+                </div>
 
                 <div className="md:hidden">
                     <div
