@@ -48,7 +48,7 @@ export default function PricingSection() {
           <img
             src="/images/pricing-placeholder.png"
             alt="Фоновое изображение для блока тарифов"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-fill"
           />
           <div className="relative rounded-3xl p-8 lg:p-16">
             <div className="text-center text-white mb-12">
@@ -57,7 +57,7 @@ export default function PricingSection() {
                 <br />
                  уровень чистоты
               </h2>
-              <p className="text-white/80 max-w-3xl mx-auto pt-3 w-90 text-lg mb-20">
+              <p className="text-white/80 max-w-3xl mx-auto pt-3 w-80 text-lg mb-20">
                 Стань участником клуба и получай доступ к профессиональному уходу, приоритетное обслуживание и персональные бонусы.
               </p>
             </div>

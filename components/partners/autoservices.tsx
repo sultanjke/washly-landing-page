@@ -31,7 +31,7 @@ export default function PartnersFeatureCards() {
   return (
     <section data-reveal className="px-4 pt-20 pb-16 transition-colors sm:px-6 lg:px-8" id="autoservices">
       <div className="max-w-7xl mx-auto">
-        <div className="relative overflow-hidden rounded-[3rem] bg-gray-900 text-white shadow-2xl">
+        <div className="relative overflow-hidden rounded-4xl bg-gray-900 text-white shadow-2xl">
           <Image
             src="/preview-bg-img.png"
             alt="Фон блока партнёров"
@@ -39,7 +39,7 @@ export default function PartnersFeatureCards() {
             fill
             priority
             sizes="100vw"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-fill"
             style={{ objectPosition: "center" }}
           />
           <div
@@ -53,9 +53,8 @@ export default function PartnersFeatureCards() {
 
           <div className="relative z-10 px-6 py-16 sm:px-10 lg:px-16">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-4xl font-bold leading-tight">
-                Работаем как с крупными автосервисами,
-                <br className="hidden sm:block" /> так и с премиальными автодетейлингами
+              <h2 className="text-3xl font-bold leading-tight">
+                Работаем с крупными автосервисами
               </h2>
             </div>
 
