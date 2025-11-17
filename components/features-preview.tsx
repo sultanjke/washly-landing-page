@@ -87,14 +87,14 @@ export default function FeaturesPreview() {
                 </p>
                 <div className="relative mx-auto hidden h-[640px] max-w-5xl md:block">
                     <div className="absolute inset-0" aria-hidden={true}>
-                        <div className="absolute left-22 top-1/2 z-10 w-[17.7rem] -translate-y-1/2 transform-gpu">
+                        <div className="absolute left-22 top-[65%] z-10 w-100 -translate-y-1/2 transform-gpu">
                             <Image src="/app_demonstration_2.png" alt="App screen navigation" width={284} height={586} loading="lazy" className="h-auto w-full" />
                         </div>
-                        <div className="absolute left-1/2 top-1/2 z-20 w-[24rem] -translate-x-1/2 transform-gpu">
+                        <div className="absolute left-1/2 z-20 w-120 -translate-x-1/2 transform-gpu">
                             <Image src="/app_demonstration_3.png" alt="App home screen" width={384} height={768} priority className="h-auto w-full" />
                         </div>
-                        <div className="absolute right-22 top-1/2 z-10 w-68 -translate-y-1/2 transform-gpu">
-                            <Image src="/app_demonstration_1.png" alt="App booking screen" width={272} height={586} loading="lazy" className="h-auto w-full" />
+                        <div className="absolute right-22 top-[65%] z-10 w-100 -translate-y-1/2 transform-gpu">
+                            <Image src="/app_demonstration_1.png" alt="App booking screen" width={284} height={586} loading="lazy" className="h-auto w-full" />
                         </div>
                     </div>
                 </div>
