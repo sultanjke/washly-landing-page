@@ -32,7 +32,7 @@ export default function ThemeToggle({ className }: ThemeToggleProps) {
     >
       {isMounted ? (
         <img
-          src={isDark ? '/themes/lighttheme.png' : '/themes/darktheme.png'}
+          src={isDark ? '/themes/lighttheme.webp' : '/themes/darktheme.webp'}
           alt=""
           className="h-3 w-3"
         />

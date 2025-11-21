@@ -5,9 +5,9 @@ import {useEffect, useRef, useState} from "react";
 import '@/styles/demo-rail.css';
 
 const slides = [
-    {src: "/app_demonstration_1.png", alt: "Booking"},
-    {src: "/app_demonstration_2.png", alt: "Navigation"},
-    {src: "/app_demonstration_3.png", alt: "Home"},
+    {src: "/app_demonstration_1.webp", alt: "Booking"},
+    {src: "/app_demonstration_2.webp", alt: "Navigation"},
+    {src: "/app_demonstration_3.webp", alt: "Home"},
 ];
 
 export default function AppDemoRail() {
@@ -87,8 +87,8 @@ export default function AppDemoRail() {
                                                     : "translateZ(-60px) rotateY(-6deg)",
                                     }}
                                 >
-                                    {/* мокап-рамка (опционально: подставь PNG с рамкой телефона) */}
-                                    {/* <Image src="/frames/iphone-15.png" alt="" fill className="pointer-events-none object-contain" /> */}
+                                    {/* мокап-рамка (опционально: подставь webp с рамкой телефона) */}
+                                    {/* <Image src="/frames/iphone-15.webp" alt="" fill className="pointer-events-none object-contain" /> */}
 
                                     <Image
                                         src={s.src}

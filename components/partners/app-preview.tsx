@@ -12,7 +12,7 @@ export default function AppPreview() {
               </h3>
             </div>
             <img
-              src="/appPreview2.png"
+              src="/appPreview2.webp"
               alt="Настройка времени, боксов и цен на услуги"
               className="h-full w-full object-cover"
             />
@@ -26,7 +26,7 @@ export default function AppPreview() {
               </h3>
             </div>
             <img
-              src="/appPreview1.png"
+              src="/appPreview1.webp"
               alt="Визиты и доход с выгрузкой в Excel / PDF"
               className="h-full w-full object-cover"
             />

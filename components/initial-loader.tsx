@@ -23,11 +23,11 @@ export default function InitialLoader({ children }: { children: ReactNode }) {
     let hideTimer: number | undefined
 
     const criticalAssets = [
-      "/new-bg-image.png",
-      "/app_demonstration_1.png",
-      "/app_demonstration_2.png",
-      "/app_demonstration_3.png",
-      "/download-app-illustration.png",
+      "/new-bg-image.webp",
+      "/app_demonstration_1.webp",
+      "/app_demonstration_2.webp",
+      "/app_demonstration_3.webp",
+      "/download-app-illustration.webp",
     ]
 
     const preloadImage = (src: string) =>

@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="mx-auto max-w-7xl">
         <div className="relative min-h-[800px] overflow-hidden rounded-4xl lg:min-h-[100px]">
           <Image
-            src="/new-bg-image.png"
+            src="/new-bg-image.webp"
             alt="Hero background"
             aria-hidden="true"
             fill
@@ -46,7 +46,7 @@ export default function HeroSection() {
                     aria-label="App Store link"
                   >
                     <img
-                      src="/badges/app-store-badge.png"
+                      src="/badges/app-store-badge.webp"
                       alt="App Store"
                       loading="lazy"
                       decoding="async"
@@ -60,7 +60,7 @@ export default function HeroSection() {
                     aria-label="Google Play link"
                   >
                     <img
-                      src="/badges/google-play-badge.png"
+                      src="/badges/google-play-badge.webp"
                       alt="Google Play"
                       loading="lazy"
                       decoding="async"

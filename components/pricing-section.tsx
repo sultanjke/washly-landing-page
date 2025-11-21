@@ -20,7 +20,7 @@ export default function PricingSection() {
       priceDiscount: "‎",
       features: [true, true, true, true, false, false, false, false],
       popular: false,
-      imageSrc: "/images/basic-plan.png",
+      imageSrc: "/images/basic-plan.webp",
     },
     {
       name: "Премиум",
@@ -29,7 +29,7 @@ export default function PricingSection() {
       features: [true, true, true, true, true, true, false, false],
       popular: true,
       popularLabel: "Самый популярный",
-      imageSrc: "/images/premium-plan.png",
+      imageSrc: "/images/premium-plan.webp",
     },
     {
       name: "VIP",
@@ -37,7 +37,7 @@ export default function PricingSection() {
       priceDiscount: "15990₸",
       features: [true, true, true, true, true, true, true, true],
       popular: false,
-      imageSrc: "/images/vip-plan.png",
+      imageSrc: "/images/vip-plan.webp",
     },
   ];
 
@@ -46,7 +46,7 @@ export default function PricingSection() {
       <div className="max-w-7xl mx-auto">
         <div className="relative rounded-3xl overflow-hidden">
           <img
-            src="/images/pricing-placeholder.png"
+            src="/images/pricing-placeholder.webp"
             alt="Фоновое изображение для блока тарифов"
             className="absolute inset-0 h-full w-full object-fill"
           />
@@ -68,7 +68,7 @@ export default function PricingSection() {
                   {plan.popular && (
                     <div className="pointer-events-none absolute inset-x-4 top-[-10] pb-6 -translate-y-1/2 flex items-center justify-center gap-2 rounded-xl bg-green-500 py-2 text-md font-regular font-regular tracking-wide text-white shadow-xl">
                       <span>{plan.popularLabel ?? "Привилегированный план"}</span>
-                      <img src="/particles.png" alt="" loading="lazy" decoding="async" className="h-4 w-4"/>
+                      <img src="/particles.webp" alt="" loading="lazy" decoding="async" className="h-4 w-4"/>
                     </div>
                   )}
                   <div

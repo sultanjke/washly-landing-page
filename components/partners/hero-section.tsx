@@ -115,7 +115,7 @@ export default function PartnersHeroSection() {
                 <div className="max-w-7xl mx-auto">
                     <div className="relative min-h-[400px] overflow-hidden rounded-3xl lg:minh-[500px]">
                         <Image
-                            src="/partners-bg-img.png"
+                            src="/partners-bg-img.webp"
                             alt="Hero background"
                             aria-hidden="true"
                             fill

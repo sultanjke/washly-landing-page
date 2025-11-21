@@ -40,7 +40,7 @@ export default function Header() {
                     <div className="flex items-center gap-12">
                         <Link href="/" className="flex h-8 w-20 items-center">
                             <Image
-                                src="/icon-black.png"
+                                src="/icon-black.webp"
                                 alt="Washly"
                                 width={80}
                                 height={32}
@@ -48,7 +48,7 @@ export default function Header() {
                                 className="block h-full w-full object-contain dark:hidden"
                             />
                             <Image
-                                src="/icon-white.png"
+                                src="/icon-white.webp"
                                 alt="Washly"
                                 width={80}
                                 height={32}
