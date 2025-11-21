@@ -3,25 +3,25 @@ export default function PartnersFeaturesPreview() {
     {
       value: "1",
       label: "год работаем в сфере автомойки",
-      icon: "/achievementsIcons/trophy.png",
+      icon: "/achievementsIcons/trophy.webp",
       alt: "trophy",
     },
     {
       value: "+100к",
       label: "регистраций в приложении",
-      icon: "/achievementsIcons/ppl.png",
+      icon: "/achievementsIcons/ppl.webp",
       alt: "ppl",
     },
     {
       value: "2",
       label: "страны и 10 городов по всему миру",
-      icon: "/achievementsIcons/worldwide.png",
+      icon: "/achievementsIcons/worldwide.webp",
       alt: "worldwide",
     },
     {
       value: "100+",
       label: "партнеров во всех странах",
-      icon: "/achievementsIcons/handshake.png",
+      icon: "/achievementsIcons/handshake.webp",
       alt: "handshake",
     },
   ]

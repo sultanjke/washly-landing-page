@@ -4,25 +4,25 @@ export default function PartnersFeatureCards() {
   const services = [
     {
       name: "Tiffany detailing",
-      image: "/servicePreviews/Tiffany.png",
+      image: "/servicePreviews/Tiffany.webp",
       ratingText: "Автосервис премиум-класса",
       address: "проспект Райымбека, 196Б/1, Алматы",
     },
     {
       name: "Detail masters",
-      image: "/servicePreviews/DetailMasters.png",
+      image: "/servicePreviews/DetailMasters.webp",
       ratingText: "Автосервис",
       address: "проспект Назарбаева, 270а",
     },
     {
       name: "Swag",
-      image: "/servicePreviews/Swag.png",
+      image: "/servicePreviews/Swag.webp",
       ratingText: "Автосервис и детейлинг",
       address: "проспект Райымбека, 196Б/1",
     },
     {
       name: "Car Vision",
-      image: "/servicePreviews/CarVision.png",
+      image: "/servicePreviews/CarVision.webp",
       ratingText: "Премиальная автомойка",
       address: "проспект Гагарина, 111Б/1",
     },
@@ -33,7 +33,7 @@ export default function PartnersFeatureCards() {
       <div className="max-w-7xl mx-auto">
         <div className="relative overflow-hidden rounded-4xl bg-gray-900 text-white shadow-2xl">
           <Image
-            src="/preview-bg-img.png"
+            src="/preview-bg-img.webp"
             alt="Фон блока партнёров"
             aria-hidden="true"
             fill
@@ -82,7 +82,7 @@ export default function PartnersFeatureCards() {
 
                     <div className="flex items-start gap-2 text-sm text-gray-600">
                       <img
-                        src="/rating.png"
+                        src="/rating.webp"
                         alt="Рейтинг"
                         loading="lazy"
                         decoding="async"
@@ -93,7 +93,7 @@ export default function PartnersFeatureCards() {
 
                     <div className="flex items-start gap-2 text-sm text-gray-600">
                       <img
-                        src="/location.png"
+                        src="/location.webp"
                         alt="Адрес"
                         loading="lazy"
                         decoding="async"

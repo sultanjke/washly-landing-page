@@ -14,7 +14,7 @@ export default function HowItWorks() {
         >
             <div className="max-w-6xl mx-auto text-center scale-[1.08]">
                 <div className="inline-flex items-center justify-center w-16 h-16 mb-6">
-                    <img src="/Glowing%20Star.png"/>
+                    <img src="/webp-public/Glowing%20Star.webp" alt="glowing star"/>
                 </div>
                 <h2 className="mb-3 text-4xl font-bold text-gray-900 transition-colors dark:text-white">Как это работает?</h2>
                 <p className="mb-16 text-xl text-gray-500 transition-colors dark:text-gray-400">Начните за минуты, мойтесь за секунды</p>

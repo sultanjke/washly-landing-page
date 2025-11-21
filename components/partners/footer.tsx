@@ -34,8 +34,8 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto flex flex-col items-center justify-between gap-4 px-4 py-6 text-sm text-gray-500 sm:flex-row sm:px-6 lg:px-8 dark:text-gray-400">
                 <div className="flex items-center gap-2 mb-4 sm:mb-0">
                     <div className="h-8 w-20 pr-2">
-                        <Image src="/icon-black.png" alt="Washly" width={80} height={32} className="block h-full w-full object-contain dark:hidden" />
-                        <Image src="/icon-white.png" alt="Washly" width={80} height={32} className="hidden h-full w-full object-contain dark:block" />
+                        <Image src="/icon-black.webp" alt="Washly" width={80} height={32} className="block h-full w-full object-contain dark:hidden" />
+                        <Image src="/icon-white.webp" alt="Washly" width={80} height={32} className="hidden h-full w-full object-contain dark:block" />
                     </div>
                     <span>© 2025 TOO Washly</span>
                     <Mail size={16} className="ml-2 text-gray-400 dark:text-gray-500" />
