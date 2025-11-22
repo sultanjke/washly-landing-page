@@ -45,14 +45,14 @@ export default function Footer() {
                 </div>
 
                 {/* Правая часть */}
-                <div className="text-center text-sm text-gray-400 sm:text-right">
+                {/* <div className="text-center text-sm text-gray-400 sm:text-right">
                     Performed by{" "}
                     <LinkPreview url="https://github.com/sultanjke" className="font-semibold text-gray-500 transition-colors dark:text-gray-400 dark:hover:text-white" width={320} height={200}>
                         Sultan Mecheyev
                     </LinkPreview>{" "}— Made by{" "}
                     <span className="transition-colors dark:text-gray-400">{copy.madeBy}</span> on{" "}
                     <span className={`font-bold transition-colors ${copy.location.className}`}>{copy.location.label}</span>
-                </div>
+                </div> */}
             </div>
         </footer>
     )
