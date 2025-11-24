@@ -88,24 +88,41 @@ export default function PartnersHeroSection() {
         <>
             {successOpen && (
                 <div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
                     onClick={() => setSuccessOpen(false)}
+                    role="dialog"
+                    aria-modal="true"
                 >
                     <div
-                        className="w-full max-w-sm rounded-3xl bg-white p-6 text-center shadow-2xl"
+                        className="success-card w-full max-w-md rounded-4xl bg-white p-8 text-center shadow-2xl"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <h3 className="text-xl font-semibold text-gray-900">
-                            Заявка отправлена
+                        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 drop-in-icon">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                className="h-7 w-7"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    fillRule="evenodd"
+                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.66a.75.75 0 1 0-1.22-.88l-3.102 4.294-1.62-1.62a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.138-.082l3.614-5.022Z"
+                                    clipRule="evenodd"
+                                />
+                            </svg>
+                        </div>
+                        <h3 className="mt-6 text-2xl font-semibold text-gray-900">
+                            Готовим релиз
                         </h3>
-                        <p className="mt-2 text-sm text-gray-600">
-                            Мы свяжемся с вами в ближайшее время.
+                        <p className="mt-3 text-base text-gray-600">
+                            Спасибо за заявку! Приложение находится в разработке и вот-вот выйдет. Мы будем держать Вас в курсе.
                         </p>
                         <button
                             onClick={() => setSuccessOpen(false)}
-                            className="mt-4 w-full rounded-2xl bg-[#4C85FF] px-4 py-2.5 text-sm font-medium text-white hover:bg-[#4DA6FF] transition"
+                            className="mt-6 w-full rounded-2xl bg-emerald-500 px-4 py-3 text-base font-semibold text-white transition hover:bg-emerald-600 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-emerald-500"
                         >
-                            Понятно
+                            Отлично
                         </button>
                     </div>
                 </div>
@@ -143,7 +160,7 @@ export default function PartnersHeroSection() {
                                                 placeholder="Ваше имя"
                                                 value={name}
                                                 onChange={(e) => setName(e.target.value)}
-                                                className="w-full rounded-2xl bg-white/10 px-4 py-3 text-gray-300 placeholder:text-white focus:outline-none"
+                                                className="w-full rounded-2xl bg-white/10 px-4 py-3 text-white placeholder:text-gray-300 focus:outline-none"
                                             />
                                             <div className="relative w-full">
                                                 <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-white">
@@ -180,6 +197,40 @@ export default function PartnersHeroSection() {
                     </div>
                 </div>
             </section>
+            <style jsx>{`
+                .success-card {
+                    animation: modal-pop 0.35s ease-out both;
+                }
+
+                .drop-in-icon {
+                    animation: icon-drop 0.5s ease-out both;
+                }
+
+                @keyframes modal-pop {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(16px) scale(0.96);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0) scale(1);
+                    }
+                }
+
+                @keyframes icon-drop {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(-40%) scale(0.9);
+                    }
+                    70% {
+                        opacity: 1;
+                        transform: translateY(8%) scale(1.04);
+                    }
+                    100% {
+                        transform: translateY(0) scale(1);
+                    }
+                }
+            `}</style>
         </>
     )
 }
