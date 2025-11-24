@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="mx-auto max-w-7xl">
         <div className="relative min-h-[800px] overflow-hidden rounded-4xl lg:min-h-[100px]">
           <Image
-            src="/new-bg-image.webp"
+            src="https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/bgImgClients.png"
             alt="Hero background"
             aria-hidden="true"
             fill
@@ -17,14 +17,6 @@ export default function HeroSection() {
             sizes="100vw"
             style={{ objectFit: "cover", objectPosition: "65% 100%" }}
             className="absolute inset-0 z-0 h-full w-full"
-          />
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 z-10"
-            style={{
-              background: "radial-gradient(circle at 50% 35%, rgba(7, 10, 20, 0.05), rgba(3, 6, 12, 0.75))",
-              mixBlendMode: "multiply",
-            }}
           />
           <div className="relative z-20 grid grid-cols-1 items-center gap-8 p-10 sm:p-12 lg:grid-cols-12 lg:p-16">
             <div className="flex flex-col items-center space-y-8 text-white text-center lg:col-span-7 lg:items-start lg:text-left">

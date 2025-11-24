@@ -115,22 +115,13 @@ export default function PartnersHeroSection() {
                 <div className="max-w-7xl mx-auto">
                     <div className="relative min-h-[400px] overflow-hidden rounded-3xl lg:minh-[500px]">
                         <Image
-                            src="/partners-bg-img.webp"
+                            src="https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/bgImgPartners.png"
                             alt="Hero background"
                             aria-hidden="true"
                             fill
                             priority
                             sizes="100vw"
                             className="absolute inset-0 z-0 h-full w-full object-cover object-[40%_95%] sm:object-[55%_90%] md:object-[80%_70%] lg:object-[100%_60%]"
-                        />
-                        <div
-                            aria-hidden="true"
-                            className="pointer-events-none absolute inset-0 z-10"
-                            style={{
-                                background:
-                                    "radial-gradient(circle at 50% 35%, rgba(7, 10, 20, 0.05), rgba(3, 6, 12, 0.75))",
-                                mixBlendMode: "multiply",
-                            }}
                         />
                         <div className="relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 lg:p-16">
                             <div className="text-white space-y-6 text-center lg:text-left lg:col-span-7 mb-30 pt-20 flex flex-col items-center lg:items-start">
@@ -152,10 +143,10 @@ export default function PartnersHeroSection() {
                                                 placeholder="Ваше имя"
                                                 value={name}
                                                 onChange={(e) => setName(e.target.value)}
-                                                className="w-full rounded-2xl bg-white/10 px-4 py-3 text-gray-300 placeholder:text-gray-400 focus:outline-none"
+                                                className="w-full rounded-2xl bg-white/10 px-4 py-3 text-gray-300 placeholder:text-white focus:outline-none"
                                             />
                                             <div className="relative w-full">
-                                                <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-gray-300">
+                                                <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-white">
                                                     +7
                                                 </span>
                                                 <input
@@ -166,7 +157,7 @@ export default function PartnersHeroSection() {
                                                     value={formatLocalPhone(phoneDigits)}
                                                     onChange={handlePhoneChange}
                                                     onKeyDown={handlePhoneKeyDown}
-                                                    className="w-full rounded-2xl bg-white/10 px-12 py-3 text-gray-300 placeholder:text-gray-400 focus:outline-none"
+                                                    className="w-full rounded-2xl bg-white/10 px-12 py-3 text-gray placeholder:text-gray focus:outline-none"
                                                 />
                                             </div>
                                             <button
