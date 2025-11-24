@@ -6,9 +6,9 @@ import styles from "@/styles/FeaturesPreview.module.css";
 
 export default function FeaturesPreview() {
     const mobileSlides = [
-        { src: "/app_demonstration_1.webp", alt: "App booking" },
-        { src: "/app_demonstration_2.webp", alt: "App navigation" },
-        { src: "/app_demonstration_3.webp", alt: "App home" },
+        { src: "https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/appPreview1.png", alt: "App booking" },
+        { src: "https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/appPreview2.png", alt: "App navigation" },
+        { src: "https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/appPreview3.png", alt: "App home" },
     ] as const
 
     const sliderViewportRef = useRef<HTMLDivElement | null>(null)
@@ -88,13 +88,13 @@ export default function FeaturesPreview() {
                 <div className="relative mx-auto hidden h-[640px] max-w-5xl md:block">
                     <div className="absolute inset-0" aria-hidden={true}>
                         <div className="absolute left-22 top-[65%] z-10 w-100 -translate-y-1/2 transform-gpu">
-                            <Image src="/app_demonstration_2.webp" alt="App screen navigation" width={284} height={586} loading="lazy" className="h-auto w-full" />
+                            <Image src="https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/appPreview2.png" alt="App screen navigation" width={284} height={586} loading="lazy" className="h-auto w-full" />
                         </div>
                         <div className="absolute left-1/2 z-20 w-120 -translate-x-1/2 transform-gpu">
-                            <Image src="/app_demonstration_3.webp" alt="App home screen" width={384} height={768} priority className="h-auto w-full" />
+                            <Image src="https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/appPreview3.png" alt="App home screen" width={384} height={768} priority className="h-auto w-full" />
                         </div>
                         <div className="absolute right-22 top-[65%] z-10 w-100 -translate-y-1/2 transform-gpu">
-                            <Image src="/app_demonstration_1.webp" alt="App booking screen" width={284} height={586} loading="lazy" className="h-auto w-full" />
+                            <Image src="https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/appPreview1.png" alt="App booking screen" width={284} height={586} loading="lazy" className="h-auto w-full" />
                         </div>
                     </div>
                 </div>

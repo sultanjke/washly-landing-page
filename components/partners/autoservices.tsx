@@ -1,29 +1,34 @@
 import Image from "next/image"
+import { Star } from "lucide-react"
 
 export default function PartnersFeatureCards() {
   const services = [
     {
       name: "Tiffany detailing",
-      image: "/servicePreviews/Tiffany.webp",
-      ratingText: "Автосервис премиум-класса",
+      image: "https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/Tiffany.webp",
+      type: "Автосервис премиум-класса",
+      rating: 4.9,
       address: "проспект Райымбека, 196Б/1, Алматы",
     },
     {
       name: "Detail masters",
-      image: "/servicePreviews/DetailMasters.webp",
-      ratingText: "Автосервис",
+      image: "https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/DetailMasters.webp",
+      type: "Автосервис",
+      rating: 4.8,
       address: "проспект Назарбаева, 270а",
     },
     {
       name: "Swag",
-      image: "/servicePreviews/Swag.webp",
-      ratingText: "Автосервис и детейлинг",
+      image: "https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/Swag.webp",
+      type: "Автосервис и детейлинг",
+      rating: 4.95,
       address: "проспект Райымбека, 196Б/1",
     },
     {
       name: "Car Vision",
-      image: "/servicePreviews/CarVision.webp",
-      ratingText: "Премиальная автомойка",
+      image: "https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/CarVision.webp",
+      type: "Премиальная автомойка",
+      rating: 4.87,
       address: "проспект Гагарина, 111Б/1",
     },
   ]
@@ -33,7 +38,7 @@ export default function PartnersFeatureCards() {
       <div className="max-w-7xl mx-auto">
         <div className="relative overflow-hidden rounded-4xl bg-gray-900 text-white shadow-2xl">
           <Image
-            src="/preview-bg-img.webp"
+            src="https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/autoservicesBgImg.png"
             alt="Фон блока партнёров"
             aria-hidden="true"
             fill
@@ -80,15 +85,14 @@ export default function PartnersFeatureCards() {
                       <h3 className="text-lg font-bold leading-snug">{service.name}</h3>
                     </div>
 
-                    <div className="flex items-start gap-2 text-sm text-gray-600">
-                      <img
-                        src="/rating.webp"
-                        alt="Рейтинг"
-                        loading="lazy"
-                        decoding="async"
-                        className="h-5 w-10"
-                      />
-                      <span>{service.ratingText}</span>
+                    <div className="flex flex-wrap items-center gap-2 text-sm text-gray-600">
+                      <span className="inline-flex items-center gap-1.5 bg-amber-50 text-xs font-semibold text-amber-600">
+                        <span className="flex h-5 w-5 items-center justify-center rounded-sm bg-amber-100 mb-1">
+                          <Star aria-hidden="true" className="h-3 w-3" strokeWidth={2} />
+                        </span>
+                        <span aria-label="Рейтинг сервиса">{service.rating.toFixed(2)}</span>
+                      </span>
+                      <span>{service.type}</span>
                     </div>
 
                     <div className="flex items-start gap-2 text-sm text-gray-600">
