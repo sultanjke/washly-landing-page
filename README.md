@@ -2,7 +2,7 @@
 
 Washly — an on-demand car wash platform — built with Next.js 16, Tailwind CSS 4.
 
-[Live](https://washly.kz)
+[Production Live](https://washly.kz)
 
 </div>
 
