@@ -7,9 +7,9 @@ export default function HeroSection() {
   return (
     <section data-reveal className="px-4 pb-12 pt-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="relative min-h-[800px] overflow-hidden rounded-4xl lg:min-h-[100px]">
+        <div className="relative h-[800px] overflow-hidden rounded-4xl lg:h-[630px]">
           <Image
-            src="https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/bgImgClients.png"
+            src="/new-bg-image.webp"
             alt="Hero background"
             aria-hidden="true"
             fill

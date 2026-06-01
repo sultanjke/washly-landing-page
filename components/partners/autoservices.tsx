@@ -5,28 +5,28 @@ export default function PartnersFeatureCards() {
   const services = [
     {
       name: "Tiffany detailing",
-      image: "https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/Tiffany.webp",
+      image: "/servicePreviews/Tiffany.webp",
       type: "Автосервис премиум-класса",
       rating: 4.9,
       address: "проспект Райымбека, 196Б/1, Алматы",
     },
     {
       name: "Detail masters",
-      image: "https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/DetailMasters.webp",
+      image: "/servicePreviews/DetailMasters.webp",
       type: "Автосервис",
       rating: 4.8,
       address: "проспект Назарбаева, 270а",
     },
     {
       name: "Swag",
-      image: "https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/Swag.webp",
+      image: "/servicePreviews/Swag.webp",
       type: "Автосервис и детейлинг",
       rating: 4.95,
       address: "проспект Райымбека, 196Б/1",
     },
     {
       name: "Car Vision",
-      image: "https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/CarVision.webp",
+      image: "/servicePreviews/CarVision.webp",
       type: "Премиальная автомойка",
       rating: 4.87,
       address: "проспект Гагарина, 111Б/1",
@@ -37,16 +37,6 @@ export default function PartnersFeatureCards() {
     <section data-reveal className="px-4 pt-20 pb-16 transition-colors sm:px-6 lg:px-8" id="autoservices">
       <div className="max-w-7xl mx-auto">
         <div className="relative overflow-hidden rounded-4xl bg-gray-900 text-white shadow-2xl">
-          <Image
-            src="https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/autoservicesBgImg.png"
-            alt="Фон блока партнёров"
-            aria-hidden="true"
-            fill
-            priority
-            sizes="100vw"
-            className="absolute inset-0 h-full w-full object-fill"
-            style={{ objectPosition: "center" }}
-          />
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 z-10"

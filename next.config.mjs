@@ -13,11 +13,6 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "amzn-s3-washly.s3.eu-north-1.amazonaws.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
         hostname: "api.microlink.io",
         pathname: "/**",
       },

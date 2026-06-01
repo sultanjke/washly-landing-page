@@ -46,7 +46,7 @@ export default function PricingSection() {
       <div className="max-w-7xl mx-auto">
         <div className="relative rounded-3xl overflow-hidden">
           <img
-            src="https://amzn-s3-washly.s3.eu-north-1.amazonaws.com/bgImgPricingList.png"
+            src="/images/pricing-placeholder.webp"
             alt="Фоновое изображение для блока тарифов"
             className="absolute inset-0 h-full w-full object-fill"
           />
